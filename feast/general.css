@@ -1,0 +1,349 @@
+/*general - start*/
+body{
+    margin: 0;
+}
+main{
+    min-height: 100vh;
+}
+
+section.sided{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+section.topped{
+    padding-top: 15vh;
+}
+section.bottomed{
+    padding-bottom: 25vh;
+}
+section.red, footer{
+    background-color: rgb(255, 247, 247);
+}
+/*general - end*/
+
+/*font - start*/
+@font-face {
+    font-family: "merryweather bold";
+    src: url(fonts/Merriweather-Bold.ttf);
+}
+@font-face {
+    font-family: "roboto bold";
+    src: url(fonts/Roboto-Bold.ttf);
+}
+@font-face{
+    font-family: "roboto medium";
+    src: url(fonts/Roboto-Medium.ttf);
+}
+h1, h2, h3, h4, h5{
+    margin-top: 0;
+    font-weight: normal;
+}
+h1, h2, h3, h4{
+    font-family: "merryweather bold";
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+h3{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+h4{
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+h5{
+    font-family: "roboto bold";
+    font-size: 23.5px;
+    margin-bottom: 1px;
+}
+*{
+    font-family: "roboto medium";
+    font-size: 23px;
+}
+/*font - end*/
+
+/*header - start*/
+header{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    margin: 0;
+    text-align: center;
+    font-size: 100px;
+}
+/*header - end*/
+
+/*horizontal section - start*/
+section.horizontal{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+section.horizontal.reversed{
+    flex-direction: row-reverse;
+}
+.hs_txt p{
+    text-align: justify;
+}
+.hs_txt_ctas{
+    display: flex;
+    gap: 12.5px;
+    flex-wrap: wrap;
+}
+.hs_img{
+    width: 600px;
+    min-width: 600px;
+    aspect-ratio: 5/4;
+}
+/*horizontal section - end*/
+
+/*vertical section - start*/
+section.vertical{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.vs_txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vs_txt h1, .vs_txt h2, .vs_txt h3, .vs_txt h4{
+    text-align: center;
+}
+.vs_txt p{
+    text-align: justify;
+    text-align-last: center;
+    margin-top: 0;
+}
+.vs_ctas{
+    display: flex;
+    gap: 12.5px;
+    flex-wrap: wrap;
+}
+/*vertical section - end*/
+
+/*cta - start*/
+.cta{
+    border: 2px solid;
+    padding: 11px 21px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s;
+    user-select: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cta.inactive{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.cta h3, .cta h4, .cta h5, .cta p{
+    margin: 0;
+}
+.cta.full{
+    background-color: #d92a2d;
+    border-color: #d92a2d;
+    color: white;
+}
+.cta.full:hover{
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
+.cta.hollow{
+    border-color: #d92a2d;
+    background-color: transparent;
+    color: #d92a2d;
+}
+.cta.cta.hollow:hover{
+    background-color: #d92a2d;
+    color: white;
+}
+/*cta - end*/
+
+/*reservation - start*/
+#reservation{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    background-image: url(images/home/home_hero.webp);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reservation .vs_txt img{
+    height: 37px;
+}
+/*reservation - end*/
+
+/*bigger tablet styling*/
+@media(max-width:1025px){
+    /*general - start*/   
+    section.topped{
+        padding-top: 7.5vh;
+    } 
+    section.bottomed{
+        padding-bottom: 10vh;
+    }
+    /*general - end*/
+
+    /*header - start*/
+    header{
+        height: 25vh;
+    }
+    /*header - end*/
+
+    /*horizontal section - start*/
+    section.horizontal, section.horizontal.reversed{
+        flex-direction: column-reverse;
+    }
+    .hs_txt_ctas{
+        justify-content: center;
+    }
+    .hs_img{
+        width: 75%;
+        min-width: none;
+    }
+    .hs_txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hs_txt h1, .hs_txt h2, .hs_txt h3{
+        text-align: center;
+    }
+    .hs_txt p{
+        text-align: justify;
+        text-align-last: center;
+    }
+    /*horizontal section - end*/
+    
+    /*reservation - start*/
+    #reservation{
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+    /*reservation - end*/
+}
+
+/*big tablet styling*/
+@media(max-width:825px){
+    /*general - start*/   
+    section.bottomed{
+        padding-bottom: 15vh;
+    }
+    /*general - end*/
+
+    /*horizontal section - start*/
+    .hs_img{
+        width: 85%;
+        min-width: 85%;
+    }
+    /*horizontal section - end*/
+}
+
+/*regular tablet styling*/
+@media(max-width:775px){
+}
+
+/*small tablet styling*/
+@media(max-width:625px){
+    /*header - start*/
+    header{
+        height: 30vh;
+    }
+    header h1{
+        font-size: 80px;
+    }
+    /*header - end*/
+
+    /*horizontal section - start*/
+    .hs_img{
+        width: 100%;
+    }
+    /*horizontal section - end*/
+}
+
+/*big phone styling*/
+@media(max-width:450px){
+    /*font - start*/
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 27px;
+    }
+    h4{
+        font-size: 22px;
+    }
+    h5{
+        font-size: 21px;
+    }
+    *{
+        font-size: 21px;
+    }
+    /*font - end*/
+
+    /*header - start*/
+    header{
+        height: 30vh;
+    }
+    header h1{
+        font-size: 65px;
+    }
+    /*header - end*/
+    
+    /*reservation - start*/
+    #reservation{
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+    /*reservation - end*/
+}
+
+/*small phone styling*/
+@media(max-width:400px){
+}
+
+/*very narrow phones*/
+@media(max-width:300px){
+    /*font - start*/
+    h1{
+        font-size: 37px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    h4{
+        font-size: 21px;
+    }
+    h5{
+        font-size: 19px;
+    }
+    *{
+        font-size: 19px;
+    }
+    /*font - end*/
+}

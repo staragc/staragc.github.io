@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--meta elements-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We don't just organize events, we create core memories that you'll cherish for a lifetime.">
+    <!--preload-->
+    <link fetchpriority="high" href="images/events/events-banner.webp" type="image/webp">
+    <link fetchpriority="high" href="images/events/events-banner_mobile.webp" type="image/webp">
+    <!--local css-->
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="scrollAnim.css">
+    <link rel="stylesheet" href="reservation.css">
+    <!--local js-->
+    <script defer src="manager-menu.js"></script>
+    <script defer src="menu.js"></script>
+    <script defer src="general.js"></script>
+    <script defer src="scrollAnim.js"></script>
+    <script defer src="navigation.js"></script>
+    <script defer src="reservation.js"></script>
+    <script defer src="events.js"></script>
+    <!--font awesome links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--tab elements-->
+    <link rel="shortcut icon" href="images/branding/favicon.webp" type="image/x-icon">
+    <title>Events - Feast</title>
+</head>
+<body>
+    <nav>
+        <a href="home.html">
+            <img src="images/branding/feast_logo.webp" alt="feast logo" id="pc">
+            <img src="images/branding/feast_icon_logo.webp" alt="feast logo" id="mobile">
+        </a>
+    </nav>
+    <div id="nav_btn">
+        <div class="nb_bar"></div>
+        <div class="nb_bar"></div>
+        <div class="nb_bar"></div>
+    </div>
+    <div id="nav_menu" class="">
+        <a href="home.html" class="nav_link"><h4>Home</h4></a>
+        <a href="menu.html" class="nav_link"><h4>Our Menus</h4></a>
+        <a href="events.html" class="nav_link current"><h4>Events</h4></a>
+        <a href="about.html" class="nav_link"><h4>About us</h4></a>
+        <button class="cta full rf_toggle"><h4>Reservation</h4></button>
+    </div>
+
+    <div id="rf_background" class="rf_toggle">
+    </div>
+    <section id="reservation_form" class="">
+        <button id="rf_exit" class="rf_toggle"><p>&#x2715;</p></button>
+        <div id="rf_header">
+            <h1>Make a Reservation</h1>
+        </div>
+        <form id="rf_slider">
+            <div id="rf_slider_content">
+                <div id="rf_slides">
+                    <div class="rf_slide">
+                        <h4>Table Information</h4>
+                        <div class="input_group">
+                            <div class="input_pair singled">
+                                <label for="rf_date"><p>Date</p></label>
+                                <input type="date" name="rf_date" id="rf_date">
+                            </div>
+                            <div class="input_pair doubled">
+                                <label for="rf_guests"><p>Guests</p></label>
+                                <input type="number" name="rf_guests" id="rf_date" placeholder="1 Guest" min="1" max="8">
+                            </div>
+                            <div class="input_pair doubled">
+                                <label for="rf_type"><p>Type</p></label>
+                                <select name="rf_type" id="rf_type">
+                                    <option value="rft_lunch"><p>Lunch</p></option>
+                                    <option value="rft_dinner"><p>Dinner</p></option>
+                                </select>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="rf_slide">
+                        <div id="rf_menu_nav">
+                           <div class="rf_menu_selector"><p>Appetizers</p></div>
+                           <div class="rf_menu_selector"><p>Lunch</p></div>
+                           <div class="rf_menu_selector"><p>Dinner</p></div>
+                           <div class="rf_menu_selector"><p>Drinks</p></div>
+                        </div>
+                        <div id="rf_menu_slides_holder">
+                            <div id="rf_menu_slides">
+                                <div id="appetizer_rf_page" class="rf_menu_slide">
+                                    <div id="blank_rf_mi" class="menu_rf_item">
+                                        <img src="images/home/menu/apetizers.webp" alt="">
+                                        <div class="rf_mi_txt">
+                                            <h2 class="rf_mi_name">Rf menu item</h2>
+                                            <p class="rf_mi_price">$44.99</p>
+                                            <div class="cta hollow mi_btn"><p>Learn more</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="lunch_rf_page" class="rf_menu_slide"></div>
+                                <div id="dinner_rf_page" class="rf_menu_slide"></div>
+                                <div id="drink_rf_page"  class="rf_menu_slide"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rf_slide">
+                        <h4>Personal Information</h4>
+                        <div class="input_group">
+                            <div class="input_pair doubled">
+                                <label for="rf_first_name"><p>First name</p></label>
+                                <input type="text" name="rf_first_name" id="rf_first_name" placeholder="John">                            
+                            </div>
+                            <div class="input_pair doubled">
+                                <label for="rf_last_name"><p>Last name</p></label>
+                                <input type="text" name="rf_last_name" id="rf_last_name" placeholder="Doe">                            
+                            </div>
+                            <div class="input_pair doubled">
+                                <label for="rf_email"><p>Email address</p></label>
+                                <input type="email" name="rf_email" id="rf_email" placeholder="email@service.com">                            
+                            </div>
+                            <div class="input_pair doubled">
+                                <label for="rf_phone"><p>Phone number</p></label>
+                                <input type="tel" name="rf_phone" id="rf_phone" placeholder="+1(123)4567890">                            
+                            </div>                            
+                        </div>
+                        
+                        <h4>Credit Card Information</h4>
+                        <div class="input_group">
+                            <div class="input_pair doubled">
+                                <label for="rf_card_first_name"><p>Card first name</p></label>
+                                <input type="text" name="rf_card_first_name" id="rf_card_first_name" placeholder="Jhon">                            
+                            </div>
+                            <div class="input_pair doubled">
+                                <label for="rf_card_last_name"><p>Card last name</p></label>
+                                <input type="text" name="rf_card_last_name" id="rf_card_last_name" placeholder="Doe">                            
+                            </div>
+                            <div class="input_pair doubled">
+                                <label for="rf_card_number"><p>Card number</p></label>
+                                <input type="number" name="rf_card_number" id="rf_card_number" placeholder="1234 5678 9101 1121" min="111111111111" max="999999999999">                            
+                            </div>
+                            <div class="input_pair doubled">
+                                <label for="rf_card_date"><p>Purchase date</p></label>
+                                <input type="date" name="rf_card_date" id="rf_card_date" placeholder="">                            
+                            </div>
+                        </div>
+                    </div>
+                    <divclass="rf_slide"></div>
+                </div>
+            </div>
+            <div id="rf_nav">
+                <div id="rf_nav_previous" class="cta hollow"><p>Previous</p></div>
+                <div id="rf_nav_next" class="cta hollow"><p>Next</p></div>
+                <button id="rf_nav_submit" type="submit" class="cta full"><p>Submit</p></button>
+            </div>
+        </form>
+    </section>
+
+    <div id="mm_background" class="mi_btn"></div>
+    <section id="menu_modal" class="">
+        <div id="mm_exit" class="mi_btn"><p>&#x2715;</p></div>
+        <img id="mm_img" src="" alt="">
+        <div id="menu_modal_text">
+            <h1 id="mm_name"></h1>
+            <h3 id="mm_category"></h3>
+            <h3 id="mm_price"></h3>
+            <p id="mm_description"></p>
+            <h2>Main ingredients : </h2>
+            <p id="mm_ingredients"></p>
+        </div>
+    </section>
+
+    <main>
+        <header>
+            <h1>Events</h1>
+        </header>
+        
+        <section id="event_intro" class="sided topped bottomed animated slide_up">
+            <div class="vs_txt">
+                <h1>They're Not Just Events, They're Memories!</h1>
+                <p>At Feast, we specialize in more than just hosting events – we craft cherished memories. Our dedicated team goes above and beyond to ensure every moment is meticulously planned and flawlessly executed. Trust us to turn your event into an unforgettable experience</p>
+            </div>
+        </section>
+
+        <section id="private_dining" class="sided bottomed horizontal">
+            <div class="hs_txt animated slide_up">
+                <h1>Private Dining</h1>
+                <p>Experience the epitome of personalized service with our private dining events. Whether it's an intimate family celebration or a business dinner, we create an ambiance that's tailored to your needs. Indulge in culinary delights amidst an atmosphere of sophistication and elegance.</p>
+            </div>
+            <div class="hs_img event_slider animated slide_up">
+                <div class="event_slides">
+                    <img src="images/events/private_dining/private_dining_1.webp" alt="Feast private dining image">
+                    <img src="images/events/private_dining/private_dining_2.webp" alt="Feast private dining image">
+                    <img src="images/events/private_dining/private_dining_3.webp" alt="Feast private dining image">
+                    <img src="images/events/private_dining/private_dining_4.webp" alt="Feast private dining image">
+                    <img src="images/events/private_dining/private_dining_5.webp" alt="Feast private dining image">
+                </div>
+                <div class="event_slider_nav">
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="weddings" class="sided bottomed horizontal reversed">
+            <div class="hs_txt animated slide_up">
+                <h1>Weddings</h1>
+                <p>Let us turn your dream wedding into a reality. From the breathtaking venue to the exquisite cuisine, we take care of every detail to ensure your special day is nothing short of perfection. Say 'I do' amidst an atmosphere of love, laughter, and unparalleled elegance.</p>
+            </div>
+            <div class="hs_img event_slider animated slide_up">
+                <div class="event_slides">
+                    <img src="images/events/wedding/wedding_1.webp" alt="Feast wedding image">
+                    <img src="images/events/wedding/wedding_2.webp" alt="Feast wedding image">
+                    <img src="images/events/wedding/wedding_3.webp" alt="Feast wedding image">
+                    <img src="images/events/wedding/wedding_4.webp" alt="Feast wedding image">
+                    <img src="images/events/wedding/wedding_5.webp" alt="Feast wedding image">
+                </div>
+                <div class="event_slider_nav">
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="galas" class="sided bottomed horizontal">
+            <div class="hs_txt animated slide_up">
+                <h1>Galas</h1>
+                <p>Let us host your next gala and elevate your event to new heights of sophistication. Our stunning venue, impeccable service, and gourmet cuisine set the stage for an unforgettable evening. Whether it's a charity fundraiser or corporate gala, we ensure every detail is executed flawlessly.</p>
+            </div>
+            <div class="hs_img event_slider animated slide_up">
+                <div class="event_slides">
+                    <img src="images/events/gala/gala_1.webp" alt="Feast gala image">
+                    <img src="images/events/gala/gala_2.webp" alt="Feast gala image">
+                    <img src="images/events/gala/gala_3.webp" alt="Feast gala image">
+                    <img src="images/events/gala/gala_4.webp" alt="Feast gala image">
+                    <img src="images/events/gala/gala_5.webp" alt="Feast gala image">
+                </div>
+                <div class="event_slider_nav">
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="award_ceremonies" class="sided bottomed horizontal reversed">
+            <div class="hs_txt animated slide_up">
+                <h1>Award Ceremonies</h1>
+                <p>Celebrate achievements and honor excellence with an award ceremony at Feast. Our elegant venue and expert event planning team ensure a seamless and memorable experience. From the red carpet arrival to the prestigious ceremony, let us create an unforgettable event that leaves a lasting impression.</p>
+            </div>
+            <div class="hs_img event_slider animated slide_up">
+                <div class="event_slides">
+                    <img src="images/events/awards/awards_1.webp" alt="Feast award ceremony image">
+                    <img src="images/events/awards/awards_2.webp" alt="Feast award ceremony image">
+                    <img src="images/events/awards/awards_3.webp" alt="Feast award ceremony image">
+                    <img src="images/events/awards/awards_4.webp" alt="Feast award ceremony image">
+                    <img src="images/events/awards/awards_5.webp" alt="Feast award ceremony image">
+                </div>
+                <div class="event_slider_nav">
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                    <div class="esn_bullet"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="event_inquiry" class="sided red topped bottomed vertical animated slide_up">
+            <div class="vs_txt">
+                <h1>Event Inquiry</h1>
+            </div>
+            <form action="">
+                <input type="text" name="ei_first_name" id="" class="doubled_input" placeholder="First Name">
+                <input type="text" name="ei_last_name" id="" class="doubled_input" placeholder="Last Name">
+                <input type="email" name="ei_email" id="" class="doubled_input" placeholder="Email Address">
+                <input type="tel" name="ei_phone" id="" class="doubled_input" placeholder="Phone Number">
+                <input type="date" name="ei_date" id="" class="doubled_input">
+                <select name="ei_time" id="" class="doubled_input">
+                    <option value="ei_time_lunch">Lunch</option>
+                    <option value="ei_time_dinner">Dinner</option>
+                </select>
+                <input type="number" name="ei_guests" id="" placeholder="Amout of Guests" class="singled_input">
+                <select name="ei_style" id="" class="doubled_input">
+                    <option value="default">Event Style</option>
+                    <option value="ei_style_seated">Seated</option>
+                    <option value="ei_style_cocktail">Cocktail</option>
+                </select>
+                <select name="ei_nature" id="" class="doubled_input">
+                    <option value="default">Event Nature</option>
+                    <option value=".ei_nature_pdining">Private Dining</option>
+                    <option value=".ei_nature_wedding">Wedding</option>
+                    <option value=".ei_nature_gala">Gala</option>
+                    <option value=".ei_nature_award">Award Ceremony</option>
+                </select>
+                <textarea name="ei_message" id="" cols="30" rows="5" class="singled_input" placeholder="Message"></textarea>
+                <button type="submit" class="cta full"><p>Submit Inquiry</p></button>
+            </form>
+        </section>
+
+        <section id="reservation" class="sided vertical animated fade_in">
+            <div class="vs_txt">
+                <h1>Enjoy the <img src="images/branding/feast_logo.webp" alt="feast logo"> Experience</h1>
+                <button class="cta full rf_toggle"><p>Make a Reservation</p></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="home.html" id="footer_logo"><img src="images/branding/feast_logo.webp" alt="feast logo"></a>
+        <div id="footer_sitemap">
+            <a href="home.html" class="footer_link"><p>Home</p></a>
+            <a href="menu.html" class="footer_link"><p>Our Menus</p></a>
+            <a href="events.html" class="footer_link current"><p>Events</p></a>
+            <a href="about.html" class="footer_link"><p>About us</p></a>
+        </div>
+        <div id="footer_socials">
+            <a href="https://www.instagram.com/star.agc" class="ft_social" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/star_agc" class="ft_social" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <div class="ft_social"><i class="fa-brands fa-facebook-f"></i></div>
+            <div class="ft_social"><i class="fa-brands fa-pinterest-p"></i></div>
+        </div>
+    </footer>
+    <div id="watermark">
+        <p>&copy; 2024 STAR Agency. All rights reserved.</p>
+    </div>
+</body>
+</html>

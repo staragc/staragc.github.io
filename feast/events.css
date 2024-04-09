@@ -1,0 +1,120 @@
+/*header - start*/
+header{
+    background-image: url(images/events/events-banner.webp);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+/*header - end*/
+
+/*introduction - start*/
+#event_intro .vs_txt p{
+    margin-bottom: 0;
+}
+/*introduction - end*/
+
+/*event sections - start*/
+.hs_txt p{
+    margin-bottom: 0;
+}
+.event_slider{
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    position: relative;
+}
+.event_slides{
+    width: 1500%;
+    height: 100%;
+    display: flex;
+    touch-action: pan-y;
+}
+.event_slides img{
+    width: calc(100%/15);
+    height: 100%;
+    aspect-ratio: 5/4;
+}
+.event_slider_nav{
+    height: 35px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.esn_bullet{
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+    width: 13px;
+    height: 13px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.esn_bullet:hover, .esn_bullet.current{
+    background-color: white;
+}
+/*event sections - end*/
+
+/*event inquiry - start*/
+#event_inquiry{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#event_inquiry form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    gap: 15px;
+}
+.doubled_input, .singled_input{
+    border: 0;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.doubled_input{
+    width: calc(50% - (15px/2));
+}
+.singled_input{
+    width: 100%;
+}
+/*event inquiry - end*/
+
+/*bigger tablet styling*/
+@media(max-width:1025px){
+    /*event inquiry - start*/
+    #event_inquiry form{
+        width: 75%;
+    }
+    /*event inquiry - end*/
+}
+
+/*big tablet styling*/
+@media(max-width:825px){
+    /*event inquiry - start*/
+    #event_inquiry form{
+        width: 100%;
+    }
+    /*event inquiry - end*/
+}
+
+/*big phone styling*/
+@media(max-width:450px){
+    header{
+        background-image: url(images/events/events-banner_mobile.webp);
+    }
+
+    /*event inquiry - start*/
+    .singled_input, .doubled_input{
+        min-width: 100%;
+    }
+    /*event inquiry - end*/
+}

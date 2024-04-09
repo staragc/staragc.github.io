@@ -1,0 +1,342 @@
+#rf_background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.25);
+    backdrop-filter: blur(1px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 103;
+    transition: 0.5s;
+}
+#rf_background.on{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#reservation_form{
+    position: fixed;
+    transform: translate(-50%, 15px);
+    left: 50vw;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    height: 100vh;
+    width: calc(1.33333 * 100vh);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: 104;
+}
+#reservation_form.on{
+    left: 50vw;
+    transform: translate(-50%, 0px);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#rf_exit{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 10px;
+    border: 0;
+    background-color: #d9162c;
+    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+    color: white;
+    font-weight: bold;
+    transition: 0.25s;
+}
+#rf_exit:hover{
+    background-color: #1f1f1f;
+}
+#rf_exit p{
+    line-height: 15px;
+    font-size: 20px;
+}
+
+#rf_header{
+    height: 15%;
+    background-image: url(images/reservation_banner.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reservation_form h1{
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#rf_slider{
+    padding: 5vh 5vh 0;
+    height: calc(85% - 5vh);
+}
+#rf_slider_content{
+    width: 100%;
+    height: calc(100% - 12.5vh);
+    overflow-x: hidden;
+    touch-action: none;
+}
+#rf_slider_content.touch_interacting{
+    user-select: none;
+    cursor: grab;
+}
+#rf_slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    touch-action: pan-y;
+}
+.rf_slide{
+    min-width: calc(100% - 25px);
+    width: calc(100% - 25px);
+    height: 100%;
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    touch-action: pan-y;
+}
+.rf_slide::-webkit-scrollbar {
+    display: none;
+}
+.rf_slide h4{
+    text-align: center;
+}
+
+.input_group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-content: start;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.input_group:last-child{
+    margin-bottom: 0;
+}
+.input_pair{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: fit-content;
+}
+.input_pair p{
+    margin: 0;
+}
+.input_pair input, .input_pair select, .input_pair textarea{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    padding: 10px;
+    background-color: rgb(238, 238, 238);
+    box-sizing: border-box;
+}
+.input_pair.singled{
+    width: 100%;
+}
+.input_pair.doubled{
+    width: calc(50% - 25px/2);
+}
+
+#rf_nav{
+    height: 12.5vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#rf_menu_nav{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+.rf_menu_selector{
+    padding: 10px 5px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    background-color: #f0f0f0;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.rf_menu_selector:hover, .rf_menu_selector.current{
+    background-color: #d9162c;
+    color: white;
+}
+.rf_menu_selector p{
+    margin: 0;
+}
+#rf_menu_slides_holder{
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+#rf_menu_slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: 1.25s;
+}
+.rf_menu_slide{
+    min-width: calc(100% - 25px);
+    padding: 0 12.5px;
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.rf_menu_slide::-webkit-scrollbar {
+    display: none;
+}
+
+#blank_rf_mi{
+    display: none;
+}
+.menu_rf_item{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.menu_rf_item img{
+    width: calc(35% - (25px/2));
+    aspect-ratio: 1/1;
+}
+.rf_mi_txt{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.rf_mi_price{
+    margin-top: 0;
+}
+.rf_mi_description{
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+.rf_mi_description::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, white, transparent);
+    bottom: 0;
+    z-index: 2;
+}
+
+/*bigger tablet styling*/
+@media(max-width:1025px){
+    #reservation_form{
+        top: 50vh;
+        transform: translate(-50%, calc(-50% + 15px));
+        height: 100vw;
+        width: 100vw;
+    }
+    #reservation_form.on{
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*big tablet styling*/
+@media(max-width:825px){
+}
+
+/*regular tablet styling*/
+@media(max-width:775px){
+}
+
+/*small tablet styling*/
+@media(max-width:625px){
+    #rf_slider{
+        padding: 5vw 5vw 0;
+        height: calc(85% - 5vw);
+    }
+    #rf_slider_content{
+        height: calc(100% - 10vh);
+    }
+
+    #reservation_form{
+        top: 50vh;
+        transform: translate(-50%, calc(-50% + 15px));
+        height: calc(100vw*1.25);
+        width: 100vw;
+    }
+    #rf_nav{
+        height: 10vh;
+    }
+}
+
+/*big phone styling*/
+@media(max-width:450px){
+    #reservation_form{
+        top: 50vh;
+        transform: translate(-50%, calc(-50% + 15px));
+        height: 90vh;
+        width: 100%;
+    }
+
+    #rf_header{
+        height: 20%;
+    }
+    #rf_slider{
+        height: calc(80% - 5vw);
+    }
+
+    .input_pair.singled, .input_pair.doubled{
+        width: 100%;
+    }
+    #rf_nav{
+        gap: 5px;
+    }
+    
+    .menu_rf_item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu_rf_item img{
+        width: 80%;
+    }
+    .rf_mi_txt{
+        align-items: center;
+    }
+    .rf_mi_txt h2{
+        text-align: center;
+    }
+    .rf_mi_price{
+        text-align: center;
+    }
+    .rf_mi_description{
+        text-align: justify;
+        text-align-last: center;
+    }
+}
+
+/*small phone styling*/
+@media(max-width:400px){
+    #rf_menu_nav{
+        flex-wrap: wrap;
+    }
+}
+
+/*very narrow phones*/
+@media(max-width:300px){
+}

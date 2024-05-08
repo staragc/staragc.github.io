@@ -1,0 +1,71 @@
+#contact{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#socials, #email{
+    width: calc(50% - 25px);
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: fit-content;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    border-left: 3px solid rgb(28, 28, 32);
+}
+.social:last-child{
+    margin-bottom: 0;
+}
+.social:hover{
+    color: white;
+}
+.social::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(28, 28, 32);
+    width: 0%;
+    top:0;
+    left: 0;
+    height: 100%;
+    transition: 0.5s;
+}
+.social:hover::after{
+    width: 100%;
+}
+.social p, .social i{
+    z-index: 1;
+    transition: 0.5s;
+}
+.social p{
+    margin: 0;
+}
+.social i{
+    font-size: 30px;
+}
+
+#email form{
+    display: flex;
+    flex-direction: column;
+    gap: 12.5px;
+}
+#email form input, #email form textarea{
+    padding: 10px 15px;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+
+/*bigger tablet styling*/
+@media(max-width:1079px){
+    #socials, #email{
+        width: 100%;
+    }
+}

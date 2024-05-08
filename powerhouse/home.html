@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--meta elements-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--local javascript-->
+    <script defer src="manager-comments.js"></script>
+    <script defer src="manager-staff.js"></script>
+    <script defer src="manager-portfolio.js"></script>
+    <script defer src="navigation.js"></script>
+    <script defer src="scrollAnim.js"></script>
+    <script defer src="home.js"></script>
+    <!--local css-->
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="scrollAnim.css">
+    <link rel="stylesheet" href="home.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--tab bar-->
+    <link rel="shortcut icon" href="images/branding/favicon.webp" type="image/x-icon">
+    <title>POWERHOUSE - Residential Architecture</title>
+</head>
+<body>
+    <nav>
+        <a href="home.html" class="nav_logo" id="nl_white"><img src="images/branding/powerhouse logo text white.webp" alt=""></a>
+        <a href="home.html" class="nav_logo" id="nl_dark"><img src="images/branding/powerhouse logo text dark.webp" alt=""></a>
+        <div id="nav_btn">
+            <div class="nb_bar"></div>
+            <div class="nb_bar"></div>
+            <div class="nb_bar"></div>
+        </div>
+    </nav>
+    <div id="nav_menu">
+        <div id="nm_links">
+            <a href="home.html" class="current"><h4>Home</h4></a>
+            <a href="services.html"><h4>Services</h4></a>
+            <a href="portfolio.html"><h4>Portfolio</h4></a>
+            <a href="about.html"><h4>About</h4></a>
+            <a href="contact.html"><h4>Contact</h4></a>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero" class="sided">
+            <h1>We Design Your Dreams Into Reality.</h1>
+        </section>
+
+        <section id="about" class="sided topped double_bottomed">
+            <h2 class="section_title">Who Are We?</h2>
+            <div id="abt_content" class="animated">
+                <div id="abt_txt" class="slide_up">
+                    <h1>An Architecture Firm</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi iste ipsa assumenda id quia omnis impedit, neque obcaecati consequatur explicabo, quam delectus consectetur quis illum pariatur, magnam laboriosam eos. Cumque.</p>
+                    <div id="abt_awards">
+                        <h3 class="section_title">Awards</h3>
+                        <div id="awards_holder"></div>
+                    </div>
+                    <a href="about.html" class="cta black"><p>More About Us</p></a>
+                </div>
+                <img src="" alt="" id="abt_img" class="slide_up">
+            </div>
+        </section>
+
+        <section id="services" class="sided bottomed">
+            <div id="srv_txt" class="animated">
+                <h2 class="section_title">What Do We Do?</h2>
+                <h1 class="slide_up">Residential Architecture</h1>
+                <p class="slide_up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem eveniet, laborum perspiciatis ut voluptates obcaecati aut aliquid aliquam nulla sit quidem accusantium dolorum deserunt ratione. Doloribus quia voluptatibus eaque molestiae!</p>
+            </div>
+            <div id="srv_cards" class="animated slide_up">
+                <div class="srv_card">
+                    <h2>Exterior Design</h2>
+                </div>
+                <div class="srv_card">
+                    <h2>Interior Design</h2>
+                </div>
+                <div class="srv_card">
+                    <h2>Permits & Regulations</h2>
+                </div>
+            </div>
+            <a href="services.html" class="cta black"><p>More About Our Services</p></a>
+        </section>
+
+        <section id="value_proposition" class="sided topped bottomed dark">
+            <h2 class="section_title">Why Choose Us?</h2>
+            <div id="vp_grid" class="animated slide_up">
+                <div class="vp_cell">
+                    <h1>Our Values</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fugit, itaque blanditiis sint provident obcaecati veritatis dicta, non qui accusantium nemo vitae perferendis reprehenderit mollitia minus culpa nulla molestiae aspernatur!</p>
+                </div>
+                <div class="vp_cell">
+                    <h1>Our Philosophy</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo exercitationem similique totam culpa qui velit in aliquam eos cum reiciendis. Unde sunt beatae veritatis voluptates odio atque itaque reiciendis saepe.</p>
+                </div>
+                <div class="vp_cell">
+                    <h1>Our Framework</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat nobis, dolorem quibusdam distinctio quae, optio ipsam obcaecati ut fuga magnam explicabo quo veritatis facilis eos provident consectetur a maxime aspernatur?</p>
+                </div>
+                <div class="vp_cell">
+                    <h1>Our Process</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, quas neque aperiam officia voluptatibus aliquid facilis, quo nisi iusto, esse quia libero. Sint rerum quia perferendis nemo modi aliquam laboriosam!</p>
+                </div>
+            </div>
+            <a href="about.html#philosophy" class="cta white"><p>More Details</p></a>
+        </section>
+
+        <section id="portfolio" class="sided topped double_bottomed">
+            <h2 class="section_title">What Have We Done?</h2>
+            <h1 class="animated slide_up">Our Portfolio</h1>
+            <div id="portfolio_grid" class="animated slide_up">
+            </div>
+            <a href="portfolio.html" class="cta black"><p>More Projects</p></a>
+        </section>
+
+        <section id="staff" class="sided double_bottomed animated">
+            <h2 class="section_title">Who Works At POWERHOUSE?</h2>
+            <h1 class="slide_up">Meet The Team</h1>
+            <div id="staff_slider" class="slide_up">
+                <div id="staff_members">
+                    <div id="sm_holder">
+
+                    </div>
+                </div>
+            </div>
+            <a href="about.html#staff" class="cta black"><p>More Staff Members</p></a>
+        </section>
+
+        <section id="testimonials" class="sided bottomed">
+            <h2 class="section_title">Testimonials</h2>
+            <div id="testimonials_holder" class="animated slide_up">
+                <div id="cmt_slider">
+                    <div id="cmt">
+                        <div id="cmt_mobile_top">
+                            <img src="" alt="" id="cmtr_profile">
+                            <div id="cmt_mobile_top_txt">
+                                <h5></h5>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div id="cmt_stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h5 id="cmt_highlight"></h5>
+                        <p id="cmt_content"></p>
+                    </div>
+                    <div id="cmt_nav">
+                        <i class="fa-solid fa-chevron-left" id="cmt_previous"></i>
+                        <div id="cmt_bullets">
+                        </div>
+                        <i class="fa-solid fa-chevron-right" id="cmt_next"></i>
+                    </div>
+                </div>
+                <div id="cmtr_slider">
+                    <img src="" alt="" id="cmtr_img">
+                    <div id="cmtr_info">
+                        <h5></h5>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="invite" class="sided topped bottomed animated fade_in">
+            <h2 class="section_title">Have A Cool Project?</h2>
+            <h1>Let's Work Together!</h1>
+            <a href="contact.html" class="cta black"><p>Contact Us</p></a>            
+        </section>
+    </main>
+
+    <footer>
+        <a href="home.html"><img src="images/branding/powerhouse logo text white.webp" alt=""></a>
+        <div id="footer_sitemap">
+            <a href="home.html" class="current"><p>Home</p></a>
+            <a href="services.html"><p>Services</p></a>
+            <a href="portfolio.html"><p>Portfolio</p></a>
+            <a href="about.html"><p>About</p></a>
+            <a href="contact.html"><p>Contact</p></a>            
+        </div>
+        <p id="footer_copy">&copy; POWERHOUSE 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>

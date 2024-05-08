@@ -1,0 +1,29 @@
+.animated, .slide_up, .slide_right, .fade_in{
+    transition: 1s;
+    position: relative;
+}
+
+.slide_up{
+    top: 25px;
+    opacity: 0;
+}
+.show.slide_up, .show .slide_up{
+    top: 0;
+    opacity: 1;
+}
+
+.slide_right{
+    left: -25px;
+    opacity: 0;
+}
+.show.slide_right, .show .slide_right{
+    left: 0;
+    opacity: 1;
+}
+
+.fade_in{
+    opacity: 0;
+}
+.show.fade_in, .show .fade_in{
+    opacity: 1;
+}

@@ -8,8 +8,7 @@
     text-align-last: left;
     margin: 0;
 }
-#hs_img, #ph_img{
-    background-color: rgb(28,28,32);
+#hs_img img, #ph_img img{
     width: 600px;
     min-width: 600px;
     height: calc(600px * (4/5));
@@ -80,6 +79,29 @@
     transition-delay: 0.375s;
 }
 /*process section - end*/
+
+
+/*framework section - start*/
+#fw_illustration{
+    width: 600px;
+    height: calc(600px * (3/4));
+    margin-bottom: 25px;
+    background-color: rgb(28,28,32);
+}
+#fw_grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.fw_cell{
+    width: calc((100%/3) - (100px/3));
+    text-align: justify;
+    text-align-last: left;
+}
+.fw_cell p{
+    margin: 0;
+}
+/*framework section - end*/
 
 
 /*staff section - start*/
@@ -156,11 +178,6 @@
     width: 100%;
     overflow-x: scroll;
     padding-right: 50px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-#team_members::-webkit-scrollbar {
-  display: none;
 }
 #staff_more_content::before{
     content: "";
@@ -222,17 +239,31 @@
     #history_content, #philosophy_content{
         flex-direction: column-reverse;
     }
-    #hs_img, #ph_img{
+    #hs_img img, #ph_img img{
         width: 100%;
         min-width: auto;
-        height: calc(90vw * (9/16));
+        height: calc(90vw * (9/19));
     }
     /*history section - end*/
+
+
+    /*framework section - start*/
+    .fw_cell{
+        width: calc(50% - 25px);
+    }
+    /*framework section - end*/
 }
 
 
 /*big tablet styling*/
-@media(max-width:850px){}
+@media(max-width:850px){
+    /*framework section - start*/
+    #fw_illustration{
+        width: 550px;
+        height: calc(550px * (3/4));
+    }
+    /*framework section - end*/
+}
 
 
 /*regular tablet styling*/
@@ -241,12 +272,33 @@
     .value_cell{
         width: 100%;
     }
-    /*values section - end*/   
+    /*values section - end*/
+    
+    
+    /*framework section - start*/
+    #fw_illustration{
+        width: 550px;
+        height: calc(550px * (3/4));
+    }
+    .fw_cell{
+        width: 100%;
+    }
+    /*framework section - end*/ 
 }
 
 
 /*small tablet styling*/
 @media(max-width:625px){
+    /*framework section - start*/
+    #fw_illustration{
+        width: 100%;
+        height: calc(90vw * (3/4));
+    }
+    .fw_cell{
+        width: 100%;
+    }
+    /*framework section - end*/ 
+
     /*staff section - start*/
     .sm_content{
         flex-direction: column;
@@ -263,7 +315,7 @@
 /*big phone styling*/
 @media(max-width:450px){
     /*history section - start*/
-    #hs_img, #ph_img{
+    #hs_img img, #ph_img img{
         height: 90vw;
     }
     /*history section - end*/

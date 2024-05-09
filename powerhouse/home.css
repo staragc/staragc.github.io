@@ -1,18 +1,26 @@
+/*nav bar - start*/
+nav.top img, nav.top .nb_bar{
+    filter: drop-shadow(0 0 5px black);
+}
+/*nav bar - end*/
+
+
 /*hero section - start*/
 #hero{
     height: 100vh;
-    background-color: #add8e6;
+    background: url(images/home/hero_section.webp);
+    background-size: cover;
+    background-position-y: bottom;
     position: relative;
 }
 #hero h1{
     line-height: auto;
-    font-size: 65px;
     position: absolute;
     bottom: 50px;
     width: 90vw;
     text-wrap: wrap;
     color: white;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-shadow: 0 0 15px rgba(0,0,0,0.5);
     margin: 0;
 }
 /*hero section - end*/
@@ -39,11 +47,9 @@
     background-color: rgb(28,28,32);
 }
 
-#abt_img{
+#abt_img img{
     width: 450px;
     min-width: 450px;
-    height: calc(450px * (5/4));
-    background-color: rgb(28,28,32);
 }
 /*about section - end*/
 
@@ -151,11 +157,6 @@
     gap: 50px;
     padding-right: 75px;
     overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-#sm_holder::-webkit-scrollbar {
-  display: none;
 }
 .team_member{
     height: 400px;
@@ -268,9 +269,7 @@
 @media(max-width:1079px){
     /*hero section - start*/
     #hero{
-        height: 100vw;
-        background-color: #add8e6;
-        position: relative;
+        height: 89vh;
     }
     /*hero section - end*/
 
@@ -279,10 +278,9 @@
     #abt_content{
         flex-direction: column-reverse;
     }
-    #abt_img{
+    #abt_img img{
         width: 100%;
         min-width: auto;
-        height: calc(90vw * (9/16));
     }
     /*about section - end*/
 
@@ -322,7 +320,14 @@
 
 
 /*big tablet styling*/
-@media(max-width:850px){    
+@media(max-width:850px){ 
+    /*hero section - start*/
+    #hero{
+        height: 87.5vh;
+    }
+    /*hero section - end*/
+    
+    
     /*testimonials section - start*/    
     #cmtr_slider{
         min-width: 325px;
@@ -339,6 +344,13 @@
 
 /*regular tablet styling*/
 @media(max-width:775px){ 
+    /*hero section - start*/
+    #hero{
+        height: 85vh;
+    }
+    /*hero section - end*/
+
+
     /*value proposition section - start*/
     .vp_cell{
         width: 100%;
@@ -411,13 +423,13 @@
 @media(max-width:450px){
     /*hero section - start*/
     #hero{
-        height: 85vh;
+        height: 88vh;
     }
     /*hero section - end*/
 
 
     /*about section - start*/
-    #abt_img{
+    #abt_img img{
         height: 90vw;
     }
     /*about section - end*/
@@ -437,7 +449,14 @@
 
 
 /*regular phone styling*/
-@media(max-width:400px){    
+@media(max-width:400px){ 
+    /*hero section - start*/
+    #hero{
+        height: 86vh;
+    }
+    /*hero section - end*/
+    
+    
     /*staff section - start*/
     .team_member{
         height: 300px;
@@ -453,6 +472,11 @@
 
 /*small phone styling*/
 @media(max-width:380px){
+    /*hero section - start*/
+    #hero{
+        height: 85vh;
+    }
+    /*hero section - end*/
 }
 
 

@@ -90,12 +90,12 @@ SMObjs.forEach(element => {
 
 //load "more" staff members
 const moreSMHolder = document.getElementById("team_members");
-for (let i = 6; i >= 0; i--) {
+for (let i = 5; i < staffMembers.length; i++) {
     const staffMember = staffMembers[i];
     //create staff member element
     const SMEl = document.createElement("div");
     SMEl.classList.add("team_member");
-    moreSMHolder.prepend(SMEl);
+    moreSMHolder.append(SMEl);
     //fill staff member element
     const SMElImg = document.createElement("img");
     SMElImg.src = staffMember.poster;

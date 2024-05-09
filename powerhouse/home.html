@@ -23,7 +23,7 @@
     <title>POWERHOUSE - Residential Architecture</title>
 </head>
 <body>
-    <nav>
+    <nav class="on">
         <a href="home.html" class="nav_logo" id="nl_white"><img src="images/branding/powerhouse logo text white.webp" alt=""></a>
         <a href="home.html" class="nav_logo" id="nl_dark"><img src="images/branding/powerhouse logo text dark.webp" alt=""></a>
         <div id="nav_btn">
@@ -59,7 +59,12 @@
                     </div>
                     <a href="about.html" class="cta black"><p>More About Us</p></a>
                 </div>
-                <img src="" alt="" id="abt_img" class="slide_up">
+                <picture id="abt_img" class="slide_up">
+                    <source media="(min-width: 1080px)" srcset="images/home/about_section/home-about_4-5.webp">
+                    <source media="(min-width: 451px) and (max-width: 1079px)" srcset="images/home/about_section/home-about_19-9.webp">
+                    <source media="(max-width: 450px)" srcset="images/home/about_section/home-about_1-1.webp">
+                    <img class="responsive-image" src="images/home/about_section/home-about_4-5.webp" alt="Responsive Image">
+                </picture>
             </div>
         </section>
 
@@ -129,6 +134,7 @@
 
         <section id="testimonials" class="sided bottomed">
             <h2 class="section_title">Testimonials</h2>
+            <h1 class="animated slide_up">Satisfaction Is Guaranteed</h1>
             <div id="testimonials_holder" class="animated slide_up">
                 <div id="cmt_slider">
                     <div id="cmt">

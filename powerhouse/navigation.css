@@ -60,7 +60,7 @@ nav.on #nl_dark img{
 #nav_btn:hover .nb_bar:nth-child(2){
     width: 40px;
 }
-#nav_btn.on:hover .nb_bar, #nav_btn.on .nb_bar{
+#nav_btn.on:hover .nb_bar, #nav_btn.on .nb_bar, nav.on .nb_bar{
     width: 45px;
     background-color: white;
 }

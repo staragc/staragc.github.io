@@ -3,7 +3,7 @@ body{
     margin: 0;
 }
 main{
-    min-height: 50vh;
+    min-height: 100vh;
 }
 /*general - end*/
 
@@ -194,22 +194,29 @@ h5{
 @media(max-width:400px){
     /*fonts - start*/
     h1{
-        font-size: 50px;
+        font-size: 55px;
     }
     h2{
-        font-size: 35px;
+        font-size: 37.5px;
     }
     h3{
         font-size: 27.5px;
-    }
-    h4{
-        font-size: 22.5px;
     }
     /*fonts - end*/
 }
 
 /*small phone styling*/
 @media(max-width:380px){
+    /*fonts - start*/
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    /*fonts - end*/
+
+
     /*sections - start*/
     .topped{
         padding-top: 60px;

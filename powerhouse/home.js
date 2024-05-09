@@ -1,11 +1,15 @@
 /*nav - start*/
 const hero = document.getElementById("hero");
 function animateHomeNav(){
-    if(window.scrollY > hero.clientHeight - navBar.clientHeight){
+    if(window.scrollY >= hero.clientHeight - navBar.clientHeight){
         navBar.classList.add("opaque");
+        navBar.classList.remove("on");
+        navBar.classList.remove("top");
     }
     else{
         navBar.classList.remove("opaque");
+        navBar.classList.add("on");
+        navBar.classList.add("top");
     }
 }
 animateHomeNav();

@@ -3,22 +3,3 @@
     flex-wrap: wrap;
     gap: 50px;
 }
-.project{
-    width: calc(50% - 25px);
-}
-.project img{
-    width: 100%;
-    aspect-ratio: 3/2;
-    background-color: rgb(28,28,32);
-    margin-bottom: 5px;
-}
-.project h3{
-    margin: 0;
-}
-
-/*regular tablet styling*/
-@media(max-width:775px){
-    .project{
-        width: 100%;
-    }
-}

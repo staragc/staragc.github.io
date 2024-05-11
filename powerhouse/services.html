@@ -4,6 +4,7 @@
     <!--meta elements-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
     <!--local javascript-->
     <script defer src="manager-portfolio.js"></script>
     <script defer src="manager-staff.js"></script>
@@ -47,7 +48,12 @@
         <section id="service" class="half_topped sided bottomed">
             <div id="service_header" class="animated slide_up">
                 <h1>Residential Architecture</h1>
-                <div id="sf_img"><img src="" alt=""></div>
+                <picture id="sf_img">
+                    <source media="(min-width: 1080px)" srcset="images/services/architectural_design/services-architectural_design-19-9.webp">
+                    <source media="(min-width: 451px) and (max-width: 1079px)" srcset="images/services/architectural_design/services-architectural_design-4-3.webp">
+                    <source media="(max-width: 450px)" srcset="images/services/architectural_design/services-architectural_design-4-5.webp">
+                    <img class="responsive-image" src="images/services/architectural_design/services-architectural_design-19-9.webp" alt="Responsive Image">
+                </picture>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. In sed quam labore at, dolore optio fugiat voluptatem pariatur tenetur ipsum. Vitae ut deserunt laborum eveniet enim obcaecati quod libero eum!
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ea quae ipsum. Repellendus corrupti ad voluptatibus dicta officia quidem perspiciatis, reprehenderit tenetur reiciendis perferendis blanditiis eligendi excepturi esse dolorem exercitationem!
@@ -58,25 +64,21 @@
                 <h2 class="section_title">Exterior Design</h2>
                 <p class="ss_desc">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima officia deleniti veritatis officiis fuga iusto ea, necessitatibus facilis nostrum excepturi incidunt neque hic, consequatur ullam repellat delectus. Numquam, perspiciatis doloribus.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque amet, voluptas perspiciatis vero optio in aliquid, quasi debitis, adipisci autem officiis cum officia similique repellat sapiente facilis? Perferendis, eligendi officiis.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia earum reiciendis enim voluptatem dicta. Doloremque deserunt illum voluptate ab blanditiis. Officia laboriosam impedit itaque non ipsam, error quia sequi voluptatem?
                 </p>
-                <div class="ss_portfolio_holder">
+                <div class="">
                     <h3 class="section_title">Portfolio</h3>
-                    <div class="ss_portfolio" id="ext_des_portfolio"></div>
+                    <div class="project_holder" id="ext_des_portfolio"></div>
                 </div>
             </div>
 
             <div class="sub_service animated slide_up">
                 <h2 class="section_title">Interior Design</h2>
                 <p class="ss_desc">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima officia deleniti veritatis officiis fuga iusto ea, necessitatibus facilis nostrum excepturi incidunt neque hic, consequatur ullam repellat delectus. Numquam, perspiciatis doloribus.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque amet, voluptas perspiciatis vero optio in aliquid, quasi debitis, adipisci autem officiis cum officia similique repellat sapiente facilis? Perferendis, eligendi officiis.
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia earum reiciendis enim voluptatem dicta. Doloremque deserunt illum voluptate ab blanditiis. Officia laboriosam impedit itaque non ipsam, error quia sequi voluptatem?
                 </p>
-                <div class="ss_portfolio_holder">
+                <div class="">
                     <h3 class="section_title">Portfolio</h3>
-                    <div class="ss_portfolio" id="int_des_portfolio"></div>
+                    <div class="project_holder" id="int_des_portfolio"></div>
                 </div>
             </div>
 
@@ -87,17 +89,13 @@
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque amet, voluptas perspiciatis vero optio in aliquid, quasi debitis, adipisci autem officiis cum officia similique repellat sapiente facilis? Perferendis, eligendi officiis.
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia earum reiciendis enim voluptatem dicta. Doloremque deserunt illum voluptate ab blanditiis. Officia laboriosam impedit itaque non ipsam, error quia sequi voluptatem?
                 </p>
-                <div class="ss_portfolio_holder">
-                    <h3 class="section_title">Portfolio</h3>
-                    <div class="ss_portfolio" id="permits_portfolio"></div>
-                </div>
             </div>
         </section>
 
         <section id="invite" class="sided topped bottomed animated fade_in">
             <h2 class="section_title">Have A Cool Project?</h2>
             <h1>Let's Work Together!</h1>
-            <a href="contact.html" class="cta black"><p>Contact Us</p></a>            
+            <a href="contact.html" class="cta white"><p>Contact Us</p></a>            
         </section>
     </main>
 

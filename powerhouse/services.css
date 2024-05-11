@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 100px;
 }
-#sf_img{
+#sf_img img{
     background-color: rgb(28,28,32);
     width: 100%;
     height: calc(90vw * (9/19));
@@ -28,31 +28,19 @@
     flex-wrap: wrap;
     gap: 50px;
 }
-.project{
-    width: calc(50% - 25px);
-}
-.project img{
-    width: 100%;
-    aspect-ratio: 3/2;
-    background-color: rgb(28,28,32);
-    margin-bottom: 5px;
-}
-.project h4{
-    margin: 0;
-}
 
 
 /*bigger tablet styling*/
 @media(max-width:1079px){
-    #sf_img{
+    #sf_img img{
         height: calc(90vw * (3/4));
     }
 }
 
 
-/*regular tablet styling*/
-@media(max-width:775px){
-    .project{
-        width: 100%;
+/*big phone styling*/
+@media(max-width:450px){
+    #sf_img img{
+        height: calc(90vw * (5/4));
     }
 }

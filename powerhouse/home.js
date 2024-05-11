@@ -22,35 +22,20 @@ const homePortfolioHolder = document.getElementById("portfolio_grid");
 function loadHomePortfolio(){
     for (let i = 0; i < portfolios.length; i++){
         const currentPf = portfolios[i];
-        const currentPrj = currentPf.projects[0];
-        //create project holder
-        const prjEl = document.createElement("div");
-        prjEl.classList.add("project");
-        homePortfolioHolder.append(prjEl);
-        //fill up project holder
-        const prjImg = document.createElement("img");
-        prjImg.src = currentPrj.image;
-        prjEl.append(prjImg);
-        const prjTxt = document.createElement("h3");
-        prjTxt.innerHTML = currentPrj.name;
-        prjEl.append(prjTxt);
-    }
-
-    let prjsNL = document.querySelectorAll(".project");
-    if(prjsNL.length%2 != 0){
-        const currentPf = portfolios[portfolios.length - 1];
-        const currentPrj = currentPf.projects[currentPf.projects.length - 1];
-        //create project holder
-        const prjEl = document.createElement("div");
-        prjEl.classList.add("project");
-        homePortfolioHolder.append(prjEl);
-        //fill up project holder
-        const prjImg = document.createElement("img");
-        prjImg.src = currentPrj.image;
-        prjEl.append(prjImg);
-        const prjTxt = document.createElement("h3");
-        prjTxt.innerHTML = currentPrj.name;
-        prjEl.append(prjTxt);
+        for (let j = 0; j < 2; j++){
+            const currentPrj = currentPf.projects[j];
+            //create project holder
+            const prjEl = document.createElement("div");
+            prjEl.classList.add("project");
+            homePortfolioHolder.append(prjEl);
+            //fill up project holder
+            const prjImg = document.createElement("img");
+            prjImg.src = currentPrj.image;
+            prjEl.append(prjImg);
+            const prjTxt = document.createElement("h3");
+            prjTxt.innerHTML = currentPrj.name;
+            prjEl.append(prjTxt);            
+        }
     }
 }
 loadHomePortfolio();
@@ -89,7 +74,6 @@ const cmtrMobileName = cmtrMobileTop.querySelector("h5")
 const cmtrMobilePosition = cmtrMobileTop.querySelector("p")
 const cmtrInfo = document.getElementById("cmtr_info");
 const cmtrName = cmtrInfo.querySelector("h5");
-const cmtrPosition = cmtrInfo.querySelector("p");
 const cmtStarsEl = document.getElementById("cmt_stars");
 const cmtStars = cmtStarsEl.querySelectorAll("i");
 const cmtHighlight = document.getElementById("cmt_highlight");
@@ -122,7 +106,6 @@ function selectComment(){
         cmtrProfile.src = currentComment.cmtr_profile;
         cmtrName.innerHTML = currentComment.cmtr_name;
         cmtrMobileName.innerHTML = currentComment.cmtr_name;
-        cmtrPosition.innerHTML = currentComment.cmtr_position;
         cmtrMobilePosition.innerHTML = currentComment.cmtr_position;
         //set stars
         for (let i = 0; i < cmtStars.length; i++) {
@@ -149,7 +132,6 @@ function selectComment(){
             cmtrProfile.src = currentComment.cmtr_profile;
             cmtrName.innerHTML = currentComment.cmtr_name;
             cmtrMobileName.innerHTML = currentComment.cmtr_name;
-            cmtrPosition.innerHTML = currentComment.cmtr_position;
             cmtrMobilePosition.innerHTML = currentComment.cmtr_position;
             //set stars
             for (let i = 0; i < cmtStars.length; i++) {

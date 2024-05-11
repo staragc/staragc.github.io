@@ -1,5 +1,5 @@
 /*nav bar - start*/
-nav.top img, nav.top .nb_bar{
+nav.top img, nav.top #nav_btn{
     filter: drop-shadow(0 0 5px black);
 }
 /*nav bar - end*/
@@ -8,9 +8,10 @@ nav.top img, nav.top .nb_bar{
 /*hero section - start*/
 #hero{
     height: 100vh;
-    background: url(images/home/hero_section.webp);
+    background: url(images/home/hero/hero_section.webp);
     background-size: cover;
     background-position-y: bottom;
+    background-position-x: left;
     position: relative;
 }
 #hero h1{
@@ -73,17 +74,40 @@ nav.top img, nav.top .nb_bar{
 }
 .srv_card{
     width: calc((100%/3) - (100px/3) - 50px);
+    cursor: default;
     padding: 25px;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
     background-color: rgb(28,28,32);
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.srv_card:hover{
+    filter: grayscale(0%);
 }
 .srv_card h2{
     text-align: center;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
     color: white;
     margin: 0;
+}
+
+#srv_ext_design{
+    background: url(images/home/services_section/home-services-exterior_architecture.webp);
+    background-size: cover;
+    background-position: center;
+}
+#srv_int_design{
+    background: url(images/home/services_section/home-services-interior_architecture.webp);
+    background-size: cover;
+    background-position: center;
+}
+#srv_regulations{
+    background: url(images/home/services_section/home-services-regulation.webp);
+    background-size: cover;
+    background-position: center;
 }
 /*services section - end*/
 
@@ -104,28 +128,6 @@ nav.top img, nav.top .nb_bar{
     margin: 0;
 }
 /*value proposition section - end*/
-
-
-/*portfolio section - start*/
-#portfolio_grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    margin-bottom: 25px;
-}
-.project{
-    width: calc(50% - 25px);
-}
-.project img{
-    width: 100%;
-    aspect-ratio: 4/3;
-    margin-bottom: 10px;
-    background-color: rgb(28,28,32);
-}
-.project h3{
-    margin: 0;
-}
-/*portfolio section - end*/
 
 
 /*staff section - start*/
@@ -255,9 +257,10 @@ nav.top img, nav.top .nb_bar{
 }
 #cmtr_img{
     width: 325px;
-    height: calc(325px * (3/2));
+    height: calc(325px * (4/3));
     aspect-ratio: 2/3;
     border-radius: 5px;
+    background-color: rgb(28, 28, 32);
 }
 #cmtr_info h5, #cmtr_info p{
     margin: 0;
@@ -301,7 +304,7 @@ nav.top img, nav.top .nb_bar{
         gap: 0;
         min-width: 350px;
         width: 350px;
-        height: calc(350px * (3/2));
+        height: calc(350px * (4/3));
     }
     #cmtr_info{
         width: calc(350px - (2*15px));
@@ -324,6 +327,8 @@ nav.top img, nav.top .nb_bar{
     /*hero section - start*/
     #hero{
         height: 87.5vh;
+        background: url(images/home/hero/hero_section-tablet.webp);
+        background-size: cover;
     }
     /*hero section - end*/
     
@@ -332,7 +337,7 @@ nav.top img, nav.top .nb_bar{
     #cmtr_slider{
         min-width: 325px;
         width: 325px;
-        height: calc(325px * (3/2));
+        height: calc(325px * (4/3));
     }
     #cmtr_info{
         width: calc(325px - (2*15px));
@@ -358,18 +363,11 @@ nav.top img, nav.top .nb_bar{
     /*value proposition section - end*/
 
 
-    /*portfolio section - start*/
-    .project{
-        width: 100%;
-    }
-    /*portfolio section - end*/
-
-
     /*testimonials section - start*/    
     #cmtr_slider{
         min-width: 300px;
         width: 300px;
-        height: calc(300px * (3/2));
+        height: calc(300px * (4/3));
     }
     #cmtr_info{
         width: calc(300px - (2*15px));
@@ -424,6 +422,7 @@ nav.top img, nav.top .nb_bar{
     /*hero section - start*/
     #hero{
         height: 88vh;
+        background: url(images/home/hero/hero_section-mobile.webp);
     }
     /*hero section - end*/
 

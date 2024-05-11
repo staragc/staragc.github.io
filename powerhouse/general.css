@@ -74,6 +74,7 @@ h5{
     text-decoration: none;
     position: relative;
     background-color: transparent;
+    backdrop-filter: blur(2px);
 }
 .cta.white{
     border-color: white;
@@ -147,22 +148,72 @@ h5{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    background: url(images/invite_section/invite_section_desktop.webp);
+    background-size: cover;
+    background-position-x: left;
     text-align: center;
+}
+#invite h2, #invite h1{
+    color: white;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+#invite .cta{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+#invite:hover .cta{
+    text-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
 }
 /*invite section - end*/
 
 
+/*project holder - start*/
+.project_holder{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+.project{
+    width: calc(50% - 25px);
+    filter: grayscale(100%);
+    height: fit-content;
+    transition: 0.5s;
+}
+.project:hover{
+    filter: grayscale(0%);
+}
+.project img{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgb(28,28,32);
+}
+.project h3{
+    margin: 0;
+}
+/*project holder - end*/
+
+
 /*bigger tablet styling*/
-@media(max-width:1079px){  
+@media(max-width:1079px){ 
 }
 
 /*big tablet styling*/
 @media(max-width:850px){
+    /*invite section - start*/
+    #invite{
+        background: url(images/invite_section/invite_section_tablet.webp);
+    }
+    /*invite section - end*/ 
 }
 
 /*regular tablet styling*/
-@media(max-width:775px){      
+@media(max-width:775px){   
+    /*project holder - start*/
+    .project{
+        width: 100%;
+    }
+    /*project holder - end*/  
 }
 
 /*small tablet styling*/
@@ -188,6 +239,13 @@ h5{
         padding-bottom: 150px;
     }
     /*sections - end*/
+
+    
+    /*invite section - start*/
+    #invite{
+        background: url(images/invite_section/invite_section_mobile.webp);
+    }
+    /*invite section - end*/ 
 }
 
 /*regular phone styling*/

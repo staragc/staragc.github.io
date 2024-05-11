@@ -8,16 +8,27 @@ function loadPortfolio(){
         pfEl.classList.add("sided");
         pfEl.classList.add("bottomed");
         pfEl.classList.add("animated");
-        if(i%2 == 0){
-            if(i==0)
-                pfEl.classList.add("half_topped");
-            else
+
+        if(i == 0)
+            pfEl.classList.add("half_topped");
+
+        if(portfolios.length > 2){
+            if(i == 0){
+            }
+            else{
                 pfEl.classList.add("topped");
+                pfEl.classList.add("bottomed");
+                if((i+1)%2 == 0)
+                    pfEl.classList.add("dark");
+            }
         }
         else{
-            pfEl.classList.add("dark");
-            pfEl.classList.add("topped");
+            if(i == 0){
+                pfEl.classList.add("half_topped");
+                pfEl.classList.add("double_bottomed")
+            }       
         }
+        
         //create title
         const pfTitle = document.createElement("h1");
         pfTitle.classList.add("slide_up");
@@ -37,6 +48,7 @@ function loadPortfolio(){
             //fill up holder
             const pfPrjImg = document.createElement("img");
             pfPrjImg.src = currentProject.image;
+            pfPrjImg.alt = currentProject.alt;
             pfPrj.append(pfPrjImg);
             const pfPrjName = document.createElement("h3");
             pfPrjName.innerHTML = currentProject.name;

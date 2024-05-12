@@ -31,6 +31,7 @@ function loadHomePortfolio(){
             //fill up project holder
             const prjImg = document.createElement("img");
             prjImg.src = currentPrj.image;
+            prjImg.alt = currentPrj.alt;
             prjEl.append(prjImg);
             const prjTxt = document.createElement("h3");
             prjTxt.innerHTML = currentPrj.name;

@@ -33,6 +33,9 @@ nav.top img, nav.top #nav_btn{
     gap: 50px;
 }
 
+#abt_txt{
+    max-width: calc(100% - 450px - 50px);
+}
 #abt_txt p{
     text-align: justify;
     text-align-last: left;
@@ -41,12 +44,44 @@ nav.top img, nav.top #nav_btn{
 
 #abt_awards{
     margin-bottom: 25px;
+    overflow-x: hidden;
+    position: relative;
+}
+#abt_awards::after{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, white, transparent);
 }
 #awards_holder{
-    width: 100%;
-    height: 125px;
+    display: flex;
+    gap: 37.5px;
+}
+.awards{
+    width: fit-content;
+    display: flex;
+    position: relative;
+    gap: 37.5px;
+    animation: awardsSlider 20s linear infinite;
+}
+.awards img{
+    width: 225px;
+    height: 150px;
     background-color: rgb(28,28,32);
 }
+@keyframes awardsSlider {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
 
 #abt_img img{
     width: 450px;
@@ -284,6 +319,16 @@ nav.top img, nav.top #nav_btn{
     #abt_img img{
         width: 100%;
         min-width: auto;
+    }
+    #abt_txt{
+        max-width: none;
+    }
+    #awards_holder{
+        gap: 37.5px;
+    }
+    #awards_holder img{
+        width: 262px;
+        height: 175px;
     }
     /*about section - end*/
 

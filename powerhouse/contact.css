@@ -42,7 +42,6 @@
 }
 .social p, .social i{
     z-index: 1;
-    transition: 0.5s;
 }
 .social p{
     margin: 0;

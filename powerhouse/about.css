@@ -186,32 +186,6 @@
     background: linear-gradient(to right, transparent, white);
     z-index: 2;;
 }
-.team_member{
-    height: 400px;
-    width: calc(400px * (4/5));
-    aspect-ratio: 4/5;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-}
-.team_member img{
-    height: 400px;
-    width: calc(400px * (4/5));
-    aspect-ratio: 4/5;
-    background-color: red;
-}
-.team_member h1{
-    width: calc(100% * (5/4));
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 45px;
-    rotate: 90deg;
-    left: -54%;
-    margin: 0;
-}
 
 .staff_member:nth-child(2){
     transition-delay: 0.125s;
@@ -317,30 +291,12 @@
         width: 100%;
         height: calc(90vw * (5/4));
     }
-    .team_member{
-        height: 350px;
-        width: calc(350px * (4/5));
-    }
-    .team_member img{
-        height: 350px;
-        width: calc(350px * (4/5));
-    }
     /*staff section - end*/
 }
 
 
 /*regular phone styling*/
 @media(max-width:400px){  
-    /*staff section - start*/
-    .team_member{
-        height: 300px;
-        width: calc(300px * (4/5));
-    }
-    .team_member img{
-        height: 300px;
-        width: calc(300px * (4/5));
-    }
-    /*staff section - end*/
 }
 
 

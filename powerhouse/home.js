@@ -46,7 +46,7 @@ loadHomePortfolio();
 /*staff section - start*/
 const staffMembersHolder = document.getElementById("sm_holder");
 function loadHomeStaff(){
-    for (let i = 5; i >= 0; i--) {
+    for (let i = 4; i >= 0; i--) {
         const staffMember = staffMembers[i];
         //create staff member element
         const SMEl = document.createElement("div");
@@ -55,9 +55,15 @@ function loadHomeStaff(){
         //fill staff member element
         const SMElImg = document.createElement("img");
         SMElImg.src = staffMember.poster;
+        SMElImg.alt = staffMember.alt;
         SMEl.append(SMElImg);
         const SMElName = document.createElement("h1");
-        SMElName.innerHTML = staffMember.short_name;
+        if(staffMember.name.length <= 11){
+            SMElName.innerHTML = staffMember.name;
+        }
+        else{
+            SMElName.innerHTML = staffMember.short_name;
+        }
         SMEl.append(SMElName);
     }
 }

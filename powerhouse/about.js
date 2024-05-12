@@ -60,6 +60,7 @@ for (let i = 4; i >= 0; i--) {
     //create image
     const SMImg = document.createElement("img");
     SMImg.src = currentStaffMember.poster;
+    SMImg.alt = currentStaffMember.alt;
     SMContent.append(SMImg);
     //create text holder
     const SMTxt = document.createElement("div");
@@ -99,9 +100,15 @@ for (let i = 5; i < staffMembers.length; i++) {
     //fill staff member element
     const SMElImg = document.createElement("img");
     SMElImg.src = staffMember.poster;
+    SMElImg.alt = staffMember.alt;
     SMEl.append(SMElImg);
     const SMElName = document.createElement("h1");
-    SMElName.innerHTML = staffMember.short_name;
+    if(staffMember.name.length <= 11){
+        SMElName.innerHTML = staffMember.name;
+    }
+    else{
+        SMElName.innerHTML = staffMember.short_name;
+    }
     SMEl.append(SMElName);
 }
 

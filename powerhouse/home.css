@@ -455,7 +455,10 @@ nav.top img, nav.top #nav_btn{
     
     /*staff section - start*/
     #staff_slider::before{
-        width: 50px;
+        width: 30px;
+    }
+    #sm_holder{
+        padding-right: 30px;
     }
     /*staff section - end*/
 }

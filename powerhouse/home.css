@@ -116,11 +116,6 @@ nav.top img, nav.top #nav_btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: grayscale(100%);
-    transition: 0.5s;
-}
-.srv_card:hover{
-    filter: grayscale(0%);
 }
 .srv_card h2{
     text-align: center;

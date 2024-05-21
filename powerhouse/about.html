@@ -1,213 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--meta elements-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--SEO-->
-    <meta name="description" content="POWERHOUSE is a residential design and architecture firm that offers exterior design, interior design and permits & regulations services to make the process of designing and building your home seamless and stress-free.">
-    <!--local javascript-->
-    <script defer src="manager-staff.js"></script>
+    <meta name="description" content="POWERHOUSE is an architectural design firm that creates commercial, cultural and residential projects based on inclusivity, sustainability and technology to make the creations impactful and long-lasting">
+    <!--local JavaScript-->
     <script defer src="navigation.js"></script>
     <script defer src="scrollAnim.js"></script>
-    <script defer src="about.js"></script>
-    <!--local css-->
-    <link rel="stylesheet" href="navigation.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="scrollAnim.css">
+    <!--local CSS-->
     <link rel="stylesheet" href="general.css">
-    <!--font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--tab bar-->
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="scrollAnim.css">
+    <link rel="stylesheet" href="about.css">
+    <!--tab elements-->
     <link rel="shortcut icon" href="images/branding/favicon.webp" type="image/x-icon">
-    <title>About us | POWERHOUSE - Residential Architecture</title>
+    <title>About us | POWERHOUSE Architectural Design Firm</title>
 </head>
 <body>
-    <nav class="opaque">
-        <a href="home.html" class="nav_logo" id="nl_white"><img src="images/branding/powerhouse logo text white.webp" alt=""></a>
-        <a href="home.html" class="nav_logo" id="nl_dark"><img src="images/branding/powerhouse logo text dark.webp" alt=""></a>
-        <div id="nav_btn">
-            <div class="nb_bar"></div>
-            <div class="nb_bar"></div>
-            <div class="nb_bar"></div>
-        </div>
+    <nav id="desktop_nav">
+        <ul>
+            <li><a href="home.html" class="dsk_nav_link"><p>Home</p></a></li>
+            <li><a href="portfolio.html" class="dsk_nav_link"><p>Portfolio</p></a></li>
+            <li><a href="about.html" class="dsk_nav_link current"><p>About us</p></a></li>
+            <li><a href="contact.html" class="dsk_nav_link"><p>Contact us</p></a></li>
+        </ul>
     </nav>
-    <div id="nav_menu">
-        <div id="nm_links">
-            <a href="home.html"><h4>Home</h4></a>
-            <a href="services.html"><h4>Services</h4></a>
-            <a href="portfolio.html"><h4>Portfolio</h4></a>
-            <a href="about.html" class="current"><h4>About</h4></a>
-            <a href="contact.html"><h4>Contact</h4></a>
+    <div id="mobile_nav_header">
+        <a href="home.css" class="mnav_logo"><img src="images/branding/powerhouse logo text white.webp" alt="" id="mnav_logo_white"></a>
+        <a href="home.css" class="mnav_logo"><img src="images/branding/powerhouse logo text dark.webp" alt="" id="mnav_logo_dark"></a>
+        <div id="mnav_btn">
+            <div class="mnb_bar"></div>
+            <div class="mnb_bar"></div>
+            <div class="mnb_bar"></div>
         </div>
     </div>
+    <nav id="mobile_nav">
+        <ul>
+            <li class="mbl_nav_link"><a href="home.html"><p>Home</p></a></li>
+            <li class="mbl_nav_link"><a href="portfolio.html"><p>Portfolio</p></a></li>
+            <li class="mbl_nav_link current"><a href="about.html"><p>About us</p></a></li>
+            <li class="mbl_nav_link"><a href="contact.html"><p>Contact us</p></a></li>
+        </ul>
+    </nav>
 
     <main>
-        <h1 class="page_title sided topped">About Us</h1>
+        <h1 class="page_title sided topped half_bottomed">About us</h1>
+
+        <section id="philosophy" class="sided double_bottomed">
+            <h2 class="animated slide_up">Our Philosophy</h2>
+            <div id="phl_content" class="animated slide_up">
+                <picture id="phl_img">
+                    <source media="(min-width:1080px)" srcset="images/about/philosophy/philosophy-desktop.webp">
+                    <source media="(min-width:451px) and (max-width:1079px)" srcset="images/about/philosophy/philosophy-tablet.webp">
+                    <source media="(max-width:450px)" srcset="images/about/philosophy/philosophy-mobile.webp">
+                    <img src="images/about/philosophy/philosophy-desktop.webp" alt="a picture of a man drawing architectural plans on a white paper posted by Lex Covertoom on Pexels">
+                </picture>
+                <div id="phl_txt">
+                    <h3>Design Should Be Simple and Tell a Story.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad iusto voluptatibus placeat. Doloremque quis aperiam maiores ipsum libero a voluptas, amet beatae tempore quia quasi asperiores nulla sapiente nostrum assumenda!</p>
+                </div>
+            </div>
+        </section>
         
-        <section id="history" class="sided half_topped double_bottomed">
-            <h2 class="section_title">Our History</h2>
-            <div id="history_content" class="animated">
-                <div id="hs_txt" class="slide_up">
-                    <h1>Innovating Since 2005</h1>
+        <section id="services" class="sided double_bottomed">
+            <h2 class="animated slide_up">Our Services</h2>
+            <p class="animated slide_up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste exercitationem ipsam omnis? Consectetur magni quos, non doloremque molestiae asperiores reiciendis. Rem voluptas ex repudiandae placeat totam dicta expedita natus odio?</p>
+            <div id="services_grid" class="animated slide_up">
+                <div class="srv_cell">
+                    <h4>Exterior Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, doloribus incidunt. Quis minus eos quidem reprehenderit perferendis culpa accusamus illo modi</p>
+                </div>
+                <div class="srv_cell">
+                    <h4>Interior Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, doloribus incidunt. Quis minus eos quidem reprehenderit perferendis culpa accusamus illo modi</p>
+                </div>
+                <div class="srv_cell">
+                    <h4>Permits & Regulations</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, doloribus incidunt. Quis minus eos quidem reprehenderit perferendis culpa accusamus illo modi</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="history" class="sided double_bottomed">
+            <h2 class="animated slide_up">Our History</h2>
+            <div id="hst_content" class="animated slide_up">
+                <picture id="hst_img">
+                    <source media="(min-width:1080px)" srcset="images/about/history/history-desktop.webp">
+                    <source media="(min-width:451px) and (max-width:1079px)" srcset="images/about/history/history-tablet.webp">
+                    <source media="(max-width:450px)" srcset="images/about/history/history-mobile.webp">
+                    <img src="images/about/history/history-desktop.webp" alt="a picture of a white lightbox with the POWERHOUSE logo on it">
+                </picture>
+                <div id="hst_txt">
+                    <h3>Creating Impactful Designs Since 2017</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio itaque dolorum quasi, cumque eos eaque deleniti corporis tempora minima, ducimus, sed animi nam? Nam quia atque quae alias veritatis!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum odit architecto ullam, velit, explicabo praesentium placeat tempore quia sit itaque officia enim quasi fugiat totam assumenda. Assumenda consequatur quo fugit?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias inventore vero exercitationem similique natus ratione, consectetur placeat earum quidem pariatur, obcaecati officiis officia repellendus commodi perspiciatis libero hic, recusandae excepturi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore amet consequatur beatae est aut. Commodi debitis temporibus cum consectetur! Odio laboriosam ducimus perferendis dolor incidunt, voluptates officiis in vel id?
                     </p>
                 </div>
-                <picture id="hs_img" class="slide_up">
-                    <source media="(min-width: 1080px)" srcset="images/about/history/about-history-5-4.webp">
-                    <source media="(min-width: 451px) and (max-width: 1079px)" srcset="images/about/history/about-history-19-9.webp">
-                    <source media="(max-width: 450px)" srcset="images/about/history/about-history-1-1.webp">
-                    <img class="responsive-image" src="images/about/history/about-history-5-4.webp" alt="Responsive Image">
-                </picture>
             </div>
         </section>
 
-        <section id="philosophy" class="sided bottomed">
-            <h2 class="section_title">Our Philosophy</h2>
-            <div id="philosophy_content" class="animated">
-                <div id="ph_txt" class="slide_up">
-                    <h1>Design Should Be Simple and Tell a Story.</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odit nemo laborum! Tempore repellendus natus rem dolorem iste dignissimos, blanditiis, harum temporibus quos nam, tenetur consequuntur? Ea sunt asperiores necessitatibus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure dolorem explicabo provident laudantium, exercitationem omnis ea perspiciatis ullam reprehenderit unde illo. Deserunt minus aperiam accusamus id, itaque iure doloremque.
-                    </p>
+        <section id="framework" class="sided double_bottomed">
+            <h2 class="animated slide_up">Our Framework</h2>
+            <p class="animated slide_up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis molestias, voluptates, id quos necessitatibus, alias eius assumenda fugiat sequi ullam sapiente atque? Blanditiis distinctio, dolorem fuga quo maiores fugit harum!</p>
+            <div id="framework_content" class="animated slide_up">
+                <img src="images/about/framework.webp" alt="a venn diagram showing three circle representing inclusivity, sustainability and technology that intersect in the center to give architecture, representing the POWERHOUSE framework">
+                <div class="fw_cell">
+                    <h4>Inclusivity</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint veniam dolore, reiciendis tempore facere hic laborum nesciunt.</p>
                 </div>
-                <picture id="ph_img" class="slide_up">
-                    <source media="(min-width: 1080px)" srcset="images/about/philosophy/about-philosophy_5-4.webp">
-                    <source media="(min-width: 451px) and (max-width: 1079px)" srcset="images/about/philosophy/about-philosophy_19-9.webp">
-                    <source media="(max-width: 450px)" srcset="images/about/philosophy/about-philosophy_1-1.webp">
-                    <img class="responsive-image" src="images/about/philosophy/about-philosophy_5-4.webp" alt="Responsive Image">
-                </picture>
-            </div>
-        </section>
-
-        <section id="values" class="sided topped bottomed dark">
-            <h2 class="section_title">Our Values</h2>
-            <div id="values_grid" class="animated slide_up">
-                <div class="value_cell">
-                    <h1>Value</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste alias rem mollitia accusamus nam, debitis voluptatibus dicta, sequi amet ipsum nostrum omnis, quaerat error ex distinctio voluptatum perspiciatis vitae vero.</p>
+                <div class="fw_cell">
+                    <h4>Sustainability</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint veniam dolore, reiciendis tempore facere hic laborum nesciunt.</p>
                 </div>
-                <div class="value_cell">
-                    <h1>Value</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste alias rem mollitia accusamus nam, debitis voluptatibus dicta, sequi amet ipsum nostrum omnis, quaerat error ex distinctio voluptatum perspiciatis vitae vero.</p>
-                </div>
-                <div class="value_cell">
-                    <h1>Value</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste alias rem mollitia accusamus nam, debitis voluptatibus dicta, sequi amet ipsum nostrum omnis, quaerat error ex distinctio voluptatum perspiciatis vitae vero.</p>
-                </div>
-                <div class="value_cell">
-                    <h1>Value</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste alias rem mollitia accusamus nam, debitis voluptatibus dicta, sequi amet ipsum nostrum omnis, quaerat error ex distinctio voluptatum perspiciatis vitae vero.</p>
+                <div class="fw_cell">
+                    <h4>Technology</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint veniam dolore, reiciendis tempore facere hic laborum nesciunt.</p>
                 </div>
             </div>
         </section>
 
-        <section id="framework" class="sided topped double_bottomed">
-            <h2 class="section_title">Our Framework</h2>
-            <div id="fw_content" class="animated">
-                <h1>Harmonizing Inclusion, Vision And Design</h1>
-                <img src="images/about/about-framework.webp" alt="" id="fw_illustration" class="slide_up">
-                <div id="fw_grid">
-                    <div class="fw_cell slide_up">
-                        <h2>People</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse asperiores magni, nemo minima nam, soluta saepe sunt quas, cumque dignissimos enim dicta dolore tempore est ad tenetur. Deleniti, minima!</p>
-                    </div>
-                    <div class="fw_cell slide_up">
-                        <h2>Vision</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse asperiores magni, nemo minima nam, soluta saepe sunt quas, cumque dignissimos enim dicta dolore tempore est ad tenetur. Deleniti, minima!</p>
-                    </div>
-                    <div class="fw_cell slide_up">
-                        <h2>Architecture</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse asperiores magni, nemo minima nam, soluta saepe sunt quas, cumque dignissimos enim dicta dolore tempore est ad tenetur. Deleniti, minima!</p>
-                    </div>
-                </div>
+        <section id="team" class="sided bottomed">
+            <h2 class="animated slide_up">Meet The Team</h2>
+            <div id="team_members" class="team_members">
+                <button class="team_member">
+                    <img src="" alt="">
+                    <h3>John Doe</h3>
+                    <p>Chief Architect</p>
+                </button>
+                <button class="team_member">
+                    <img src="" alt="">
+                    <h3>John Doe</h3>
+                    <p>Chief Architect</p>
+                </button>
+                <button class="team_member">
+                    <img src="" alt="">
+                    <h3>John Doe</h3>
+                    <p>Chief Architect</p>
+                </button>
             </div>
-        </section>
-
-        <section id="process" class="sided double_bottomed">
-            <h2 class="section_title">Our Process</h2>
-            <h1>Title of Process Section</h1>
-            <p id="process_desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quae veniam eos aliquam laborum odio amet animi perspiciatis commodi excepturi vitae totam obcaecati minus temporibus, sit eveniet et! Laborum, culpa?
-            </p>
-            <ul class="animated">
-                <li class="process_pt slide_right">
-                    <div class="ppt_number">
-                        <h3>01</h3>
-                    </div>
-                    <div class="ppt_txt">
-                        <h3>Process point name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, cum hic? Excepturi, dolor nam ex et asperiores perferendis at similique temporibus libero deserunt, recusandae quasi, voluptas suscipit culpa doloremque error!</p>
-                    </div>
-                </li>
-                <li class="process_pt slide_right">
-                    <div class="ppt_number">
-                        <h3>02</h3>
-                    </div>
-                    <div class="ppt_txt">
-                        <h3>Process point name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, cum hic? Excepturi, dolor nam ex et asperiores perferendis at similique temporibus libero deserunt, recusandae quasi, voluptas suscipit culpa doloremque error!</p>
-                    </div>
-                </li>
-                <li class="process_pt slide_right">
-                    <div class="ppt_number">
-                        <h3>03</h3>
-                    </div>
-                    <div class="ppt_txt">
-                        <h3>Process point name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, cum hic? Excepturi, dolor nam ex et asperiores perferendis at similique temporibus libero deserunt, recusandae quasi, voluptas suscipit culpa doloremque error!</p>
-                    </div>
-                </li>
-                <li class="process_pt slide_right">
-                    <div class="ppt_number">
-                        <h3>04</h3>
-                    </div>
-                    <div class="ppt_txt">
-                        <h3>Process point name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, cum hic? Excepturi, dolor nam ex et asperiores perferendis at similique temporibus libero deserunt, recusandae quasi, voluptas suscipit culpa doloremque error!</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section id="staff" class="sided bottomed">
-            <h2 class="section_title ">Our Team</h2>
-            <h1>Meet The Team</h1>
-            <div id="staff_members" class="animated">
-                <div class="staff_member slide_right" id="staff_more">
-                    <button class="sm_header" id="staff_more_header">
-                        <h3>And A Team of Dedicated and Talented Architects</h3>
-                        <p>+</p>
-                    </button>
-                    <div id="staff_more_content_holder">
-                        <div id="staff_more_content" class="sm_content">
-                            <div id="team_members"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="invite" class="sided topped bottomed animated fade_in">
-            <h2 class="section_title">Have A Cool Project?</h2>
-            <h1>Let's Work Together!</h1>
-            <a href="contact.html" class="cta white"><p>Contact Us</p></a>            
+            <a href="team.html" class="cta black"><p>More Staff</p></a>
         </section>
     </main>
 
     <footer>
-        <a href="home.html"><img src="images/branding/powerhouse logo text white.webp" alt=""></a>
-        <div id="footer_sitemap">
-            <a href="home.html"><p>Home</p></a>
-            <a href="services.html"><p>Services</p></a>
-            <a href="portfolio.html"><p>Portfolio</p></a>
-            <a href="about.html" class="current"><p>About</p></a>
-            <a href="contact.html"><p>Contact</p></a>            
+        <div id="footer_top">
+            <div class="ft_t_cell">
+                <h5>Sitemap</h5>
+                <a href="home.html" class="ft_link"><p>Home</p></a>
+                <a href="portfolio.html" class="ft_link"><p>Portfolio</p></a>
+                <a href="about.html" class="ft_link current"><p>About us</p></a>
+                <a href="contact.html" class="ft_link"><p>Contact us</p></a>
+            </div>
+            <div class="ft_t_cell_column">
+                <div class="ft_t_cell" id="ft_contact">
+                    <h5>Get In Touch</h5>
+                    <p>436 491 5000</p>
+                    <a href="mailto:"><p>info@powerhouse.com</p></a>
+                </div>
+                <div class="ft_t_cell" id="ft_address">
+                    <h5>Address</h5>
+                    <p>80 Portland Street <br> Toronto, ON M5V 2N2</p>
+                </div>
+            </div>
+            <div class="ft_t_cell">
+                <h5>More</h5>
+                <a href="newsletter.html"><p>Newsletter</p></a>
+                <a href="career.html"><p>Career</p></a>
+            </div>
         </div>
-        <p id="footer_copy">&copy; POWERHOUSE 2024. All rights reserved.</p>
+        <a href="home.html"><img src="images/branding/powerhouse logo text white.webp" alt="" id="footer_logo"></a>
+        <p id="footer_copy">&copy; POWERHOUSE 2024</p>
     </footer>
 </body>
 </html>

@@ -1,496 +1,165 @@
-/*nav bar - start*/
-nav.top img, nav.top #nav_btn{
-    filter: drop-shadow(0 0 5px black);
-}
-/*nav bar - end*/
-
 
 /*hero section - start*/
 #hero{
-    height: 100vh;
-    background: url(images/home/hero/hero_section.webp);
-    background-size: cover;
-    background-position-y: bottom;
-    background-position-x: left;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
-#hero h1{
-    line-height: auto;
-    position: absolute;
-    bottom: 50px;
-    width: 90vw;
-    text-wrap: wrap;
-    color: white;
-    text-shadow: 0 0 15px rgba(0,0,0,0.5);
-    margin: 0;
+#hero_img{
+    margin-bottom: 50px;
+}
+#hero_img img{
+    width: 100%;
 }
 /*hero section - end*/
-
-
-/*about section - start*/
-#abt_content{
-    display: flex;
-    gap: 50px;
-}
-
-#abt_txt{
-    max-width: calc(100% - 450px - 50px);
-}
-#abt_txt p{
-    text-align: justify;
-    text-align-last: left;
-    margin-top: 0;
-}
-
-#abt_awards{
-    margin-bottom: 25px;
-    overflow-x: hidden;
-    position: relative;
-}
-#abt_awards::after{
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 100%;
-    z-index: 2;
-    right: 0;
-    top: 0;
-    background: linear-gradient(to left, white, transparent);
-}
-#awards_holder{
-    display: flex;
-    gap: 37.5px;
-}
-.awards{
-    width: fit-content;
-    display: flex;
-    position: relative;
-    gap: 37.5px;
-    animation: awardsSlider 30s linear infinite;
-}
-.awards img{
-    width: 225px;
-    height: 150px;
-    background-color: rgb(28,28,32);
-}
-@keyframes awardsSlider {
-    0%{
-        transform: translateX(0%);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
-}
-
-
-#abt_img img{
-    width: 450px;
-    min-width: 450px;
-}
-/*about section - end*/
-
-
-/*services section - start*/
-#srv_txt{
+    
+    
+/*portfolio section - start*/
+#portfolio .project_holder{
     margin-bottom: 25px;
 }
-#srv_txt p{
-    margin: 0;
-    text-align: justify;
-    text-align-last: left;
-}
-
-#srv_cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    width: 100%;
-    margin-bottom: 25px;
-}
-.srv_card{
-    width: calc((100%/3) - (100px/3) - 50px);
-    cursor: default;
-    padding: 25px;
-    aspect-ratio: 1/1;
-    background-color: rgb(28,28,32);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.srv_card h2{
-    text-align: center;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
-    color: white;
-    margin: 0;
-}
-
-#srv_ext_design{
-    background: url(images/home/services_section/home-services-exterior_architecture.webp);
-    background-size: cover;
-    background-position: center;
-}
-#srv_int_design{
-    background: url(images/home/services_section/home-services-interior_architecture.webp);
-    background-size: cover;
-    background-position: center;
-}
-#srv_regulations{
-    background: url(images/home/services_section/home-services-regulation.webp);
-    background-size: cover;
-    background-position: center;
-}
-/*services section - end*/
-
-
-/*value proposition section - start*/
+/*portfolio section - end*/
+    
+    
+/*value proposition - start*/
 #vp_grid{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-bottom: 25px;
 }
 .vp_cell{
-    width: calc(50% - 25px);
-    text-align: justify;
-    text-align-last: left;
+     width: calc((100%/3) - (100px/3));
 }
 .vp_cell p{
-    margin: 0;
-}
-/*value proposition section - end*/
-
-
-/*staff section - start*/
-#staff_slider{
-    width: 100%;
-    overflow-x: hidden;
-    position: relative;
-    user-select: none;
-    touch-action: pan-y;
-    margin-bottom: 25px;
-    width: 100%;
-    max-width: 100%;
-}
-#staff_slider::before{
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    right: 0;
-    background: linear-gradient(to right, transparent, white);
-    z-index: 2;
-}
-#staff_members{
-    width: 100%;
-}
-#sm_holder{
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 50px;
-    padding-right: 75px;
-    overflow-x: scroll;
-}
-/*staff section - end*/
-
-
-/*testimonials section - start*/
-#testimonials_slider{
-    width: 100%;
-    min-height: 100px;
-}
-#testimonials_holder{
-    display: flex;
-    gap: 50px;
-}
-#cmt_slider, #cmtr_slider{
-    width: calc(50% - 25px);
-}
-
-#cmt{
-    transition: 0.25s;
-}
-#cmt_mobile_top{
-    display: none;
-}
-#cmt_stars{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 15px;
-}
-#cmt_top img{
-    width: 150px;
-    height: 50px;
-    background-color: red;
-}
-#cmt h5, #cmt p{
     text-align: justify;
     text-align-last: left;
 }
-#cmt p{
-    margin: 0;
+/*value proposition - end*/
+    
+    
+/*testimonials section - start*/
+#testimonials{
+    padding-left: 5vw;
+    display: flex;
+    gap: 50px;
+    position: relative;
 }
-#cmt_nav{
+    
+#testimonials h2{
+    min-width: calc(40% - 25px);
+}
+    
+#comments_slider{
+    width: 100%;
+    overflow-x: hidden;
+}
+#comments{
+    display: flex;
+    gap: 50px;
+    width: fit-content;
+}
+.comment{
+    background-color: rgba(47, 39, 36, 0.125);
+    padding: 25px;
+    width: 500px;
+}
+.cmt_author{
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-top: 25px;
+    gap: 15px;
+    margin-bottom: 15px;
 }
-#cmt_bullets{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.cmt_bullet{
+.cmt_author img{
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
-    background-color: rgb(28, 28, 32);
-    opacity: 0.25;
-    width: 15px;
-    height: 15px;
-    transition: 0.5s;
+    background-color: #2f2724;
 }
-.cmt_bullet.current{
-    opacity: 1;
-}
-
-#cmtr_slider{
-    display: flex;
-    align-items: end;
-    gap: 25px;
-    transition: 0.25s;
-}
-#cmtr_img{
-    width: 325px;
-    height: calc(325px * (4/3));
-    aspect-ratio: 2/3;
-    border-radius: 5px;
-    background-color: rgb(28, 28, 32);
-}
-#cmtr_info h5, #cmtr_info p{
+.cmt_author h5{
     margin: 0;
+}
+.comment p{
+    text-align: justify;
+    text-align-last: left;
+    margin: 0;
+}
+    
+#cmts_nav{
+        display: flex;
+        gap: 15px;
+}
+#cmts_nav button{
+        background-color: transparent;
+        border: none;
+        font-size: 50px;
 }
 /*testimonials section - end*/
 
 
-/*bigger tablet styling*/
-@media(max-width:1079px){
-    /*hero section - start*/
-    #hero{
-        height: 89vh;
+/*big desktop styling*/
+@media(min-width:1401px){
+    #testimonials{
+        padding-left: calc((100vw - 1400px)/2);
     }
-    /*hero section - end*/
-
-
-    /*about section - start*/
-    #abt_content{
-        flex-direction: column-reverse;
-    }
-    #abt_img img{
-        width: 100%;
-        min-width: auto;
-    }
-    #abt_txt{
-        max-width: none;
-    }
-    #awards_holder{
-        gap: 37.5px;
-    }
-    #awards_holder img{
-        width: 262px;
-        height: 175px;
-    }
-    /*about section - end*/
-
-
-    /*services section - start*/
-    .srv_card{
-        width: calc(50% - 25px - 50px);
-    }
-    /*services section - end*/
-
-
-    /*testimonials section - start*/
-    #cmt_slider, #cmtr_slider{
-        width: auto;
-    }
-    
-    #cmtr_slider{
-        gap: 0;
-        min-width: 350px;
-        width: 350px;
-        height: calc(350px * (4/3));
-    }
-    #cmtr_info{
-        width: calc(350px - (2*15px));
-        margin-left: -350px;
-        padding: 15px;
-        color: white;
-        text-shadow: 0 0 5px rgba(0,0,0,0.25);
-        background-color: rgba(0,0,0,0.3);
-    }
-    #cmtr_img{
-        width: inherit;
-        height: inherit;
-    }
-    /*testimonials section - end*/ 
 }
 
 
-/*big tablet styling*/
-@media(max-width:850px){ 
-    /*hero section - start*/
-    #hero{
-        height: 87.5vh;
-        background: url(images/home/hero/hero_section-tablet.webp);
-        background-size: cover;
+/*bigger tablet styling*/
+@media(max-width:1079px){
+    /*value proposition - start*/
+    .vp_cell:nth-child(1), .vp_cell:nth-child(2){
+        width: calc(50% - 25px);
     }
-    /*hero section - end*/
-    
-    
-    /*testimonials section - start*/    
-    #cmtr_slider{
-        min-width: 325px;
-        width: 325px;
-        height: calc(325px * (4/3));
+    .vp_cell:nth-child(3){
+        width: 100%;
     }
-    #cmtr_info{
-        width: calc(325px - (2*15px));
-        margin-left: -325px;
+    /*value proposition - end*/
+
+
+    /*testimonials section - start*/
+    #testimonials{
+        flex-direction: column;
+        gap: 25px;
     }
     /*testimonials section - end*/
 }
 
 
-/*regular tablet styling*/
-@media(max-width:775px){ 
-    /*hero section - start*/
-    #hero{
-        height: 85vh;
-    }
-    /*hero section - end*/
-
-
-    /*value proposition section - start*/
-    .vp_cell{
-        width: 100%;
-    }
-    /*value proposition section - end*/
-
-
-    /*testimonials section - start*/    
-    #cmtr_slider{
-        min-width: 300px;
-        width: 300px;
-        height: calc(300px * (4/3));
-    }
-    #cmtr_info{
-        width: calc(300px - (2*15px));
-        margin-left: -300px;
-    }
-    /*testimonials section - end*/     
+/*big tablet styling*/
+@media(max-width:850px){
 }
 
 
 /*small tablet styling*/
 @media(max-width:625px){
-    /*hero section - start*/
-    #hero{
-        height: 85vh;
+    /*value proposition - start*/
+    #vp_grid{
+        gap: 25px;
     }
-    /*hero section - end*/
-
-    
-    /*services section - start*/
-    .srv_card{
+    .vp_cell:nth-child(1), .vp_cell:nth-child(2), .vp_cell:nth-child(3){
         width: 100%;
     }
-    /*services section - end*/
+    /*value proposition - end*/
 
-    /*testimonials section - start*/   
-    #cmt_mobile_top{
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 25px;
+
+    /*testimonials section - start*/
+    #testimonials{
+        flex-direction: column;
+        gap: 25px;
     }
-    #cmt_mobile_top img{
-        width: 75px;
-        height: 75px;
-        aspect-ratio: 1/1;
-        background-color: red;
-        border-radius: 100%;
-    }
-    #cmt_mobile_top_txt h5, #cmt_mobile_top_txt p{
-        margin: 0;
-        text-align: left;
-    }
-    #cmtr_slider{
-        display: none;
+    .comment{
+        background-color: rgba(47, 39, 36, 0.125);
+        padding: 25px;
+        width: 350px;
     }
     /*testimonials section - end*/
 }
 
 
 /*big phone styling*/
-@media(max-width:450px){
-    /*hero section - start*/
-    #hero{
-        height: 88vh;
-        background: url(images/home/hero/hero_section-mobile.webp);
+@media(max-width:450px){    
+    /*testimonials section - start*/
+    .comment{
+        width: calc(90vw - 50px);
     }
-    /*hero section - end*/
-
-
-    /*about section - start*/
-    #abt_img img{
-        height: 90vw;
-    }
-    /*about section - end*/
-
-    
-    /*staff section - start*/
-    #staff_slider::before{
-        width: 30px;
-    }
-    #sm_holder{
-        padding-right: 30px;
-    }
-    /*staff section - end*/
-}
-
-
-/*regular phone styling*/
-@media(max-width:400px){ 
-    /*hero section - start*/
-    #hero{
-        height: 86vh;
-    }
-    /*hero section - end*/
-    
-    
-    /*staff section - start*/
-    .team_member{
-        height: 300px;
-        width: calc(300px * (4/5));
-    }
-    .team_member img{
-        height: 300px;
-        width: calc(300px * (4/5));
-    }
-    /*staff section - end*/
-}
-
-
-/*small phone styling*/
-@media(max-width:380px){
-    /*hero section - start*/
-    #hero{
-        height: 85vh;
-    }
-    /*hero section - end*/
-}
-
-
-/*narrow phone styling*/
-@media(max-width:350px){
+    /*testimonials section - end*/
 }

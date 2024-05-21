@@ -1,70 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--meta elements-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--SEO-->
-    <meta name="description" content="POWERHOUSE is a residential design and architecture firm that offers exterior design, interior design and permits & regulations services to make the process of designing and building your home seamless and stress-free.">
-    <!--local javascript-->
-    <script defer src="manager-portfolio.js"></script>
-    <script defer src="manager-staff.js"></script>
+    <meta name="description" content="The POWERHOUSE portfolio contains over ten projects realized in seven years, all of which fully carry our framework that merges inclusivity, sustainability and technology, and our philosophy: design should be simple and tell a story!">
+    <!--local JavaScript-->
     <script defer src="navigation.js"></script>
-    <script defer src="portfolio.js"></script>
     <script defer src="scrollAnim.js"></script>
-    <!--local css-->
-    <link rel="stylesheet" href="scrollAnim.css">
+    <!--local CSS-->
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="scrollAnim.css">
     <link rel="stylesheet" href="portfolio.css">
-    <!--font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--tab bar-->
+    <!--tab elements-->
     <link rel="shortcut icon" href="images/branding/favicon.webp" type="image/x-icon">
-    <title>Portfolio | POWERHOUSE - Residential Architecture</title>
+    <title>Portfolio | POWERHOUSE Architectural Design Firm</title>
 </head>
 <body>
-    <nav class="opaque">
-        <a href="home.html" class="nav_logo" id="nl_white"><img src="images/branding/powerhouse logo text white.webp" alt=""></a>
-        <a href="home.html" class="nav_logo" id="nl_dark"><img src="images/branding/powerhouse logo text dark.webp" alt=""></a>
-        <div id="nav_btn">
-            <div class="nb_bar"></div>
-            <div class="nb_bar"></div>
-            <div class="nb_bar"></div>
-        </div>
+    <nav id="desktop_nav">
+        <ul>
+            <li><a href="home.html" class="dsk_nav_link"><p>Home</p></a></li>
+            <li><a href="portfolio.html" class="dsk_nav_link current"><p>Portfolio</p></a></li>
+            <li><a href="about.html" class="dsk_nav_link"><p>About us</p></a></li>
+            <li><a href="contact.html" class="dsk_nav_link"><p>Contact us</p></a></li>
+        </ul>
     </nav>
-    <div id="nav_menu">
-        <div id="nm_links">
-            <a href="home.html"><h4>Home</h4></a>
-            <a href="services.html"><h4>Services</h4></a>
-            <a href="portfolio.html" class="current"><h4>Portfolio</h4></a>
-            <a href="about.html"><h4>About</h4></a>
-            <a href="contact.html"><h4>Contact</h4></a>
+    <div id="mobile_nav_header">
+        <a href="home.css" class="mnav_logo"><img src="images/branding/powerhouse logo text white.webp" alt="" id="mnav_logo_white"></a>
+        <a href="home.css" class="mnav_logo"><img src="images/branding/powerhouse logo text dark.webp" alt="" id="mnav_logo_dark"></a>
+        <div id="mnav_btn">
+            <div class="mnb_bar"></div>
+            <div class="mnb_bar"></div>
+            <div class="mnb_bar"></div>
         </div>
     </div>
+    <nav id="mobile_nav">
+        <ul>
+            <li class="mbl_nav_link"><a href="home.html"><p>Home</p></a></li>
+            <li class="mbl_nav_link current"><a href="portfolio.html"><p>Portfolio</p></a></li>
+            <li class="mbl_nav_link"><a href="about.html"><p>About us</p></a></li>
+            <li class="mbl_nav_link"><a href="contact.html"><p>Contact us</p></a></li>
+        </ul>
+    </nav>
 
     <main>
-        <h1 class="page_title sided topped">Our Portfolio</h1>
+        <h1 class="page_title sided topped half_bottomed">Portfolio</h1>
 
-        <div id="portfolios"></div>
+        <section id="projects" class="sided bottomed animated slide_up">
+            <div class="project_holder">
+                <div class="project">
+                    <img src="" alt="">
+                    <h5>Lorem ipsum dolor, sit amet.</h5>
+                    <p>Residential, Complete</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="">
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                    <p>Residential, Complete</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="">
+                    <h5>Lorem ipsum dolor, sit amet.</h5>
+                    <p>Residential, Complete</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="">
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                    <p>Residential, Complete</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="">
+                    <h5>Lorem ipsum dolor, sit amet.</h5>
+                    <p>Residential, Complete</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="">
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                    <p>Residential, Complete</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="">
+                    <h5>Lorem ipsum dolor, sit amet.</h5>
+                    <p>Residential, Complete</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="">
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                    <p>Residential, Complete</p>
+                </div>
+            </div>
+        </section>
 
         <section id="invite" class="sided topped bottomed animated fade_in">
-            <h2 class="section_title">Have A Cool Project?</h2>
-            <h1>Let's Work Together!</h1>
+            <h4 class="section_title">Have A Cool Project?</h4>
+            <h2>Let's Work Together!</h2>
             <a href="contact.html" class="cta white"><p>Contact Us</p></a>            
         </section>
     </main>
 
     <footer>
-        <a href="home.html"><img src="images/branding/powerhouse logo text white.webp" alt=""></a>
-        <div id="footer_sitemap">
-            <a href="home.html"><p>Home</p></a>
-            <a href="services.html"><p>Services</p></a>
-            <a href="portfolio.html" class="current"><p>Portfolio</p></a>
-            <a href="about.html"><p>About</p></a>
-            <a href="contact.html"><p>Contact</p></a>            
+        <div id="footer_top">
+            <div class="ft_t_cell">
+                <h5>Sitemap</h5>
+                <a href="home.html" class="ft_link"><p>Home</p></a>
+                <a href="portfolio.html" class="ft_link current"><p>Portfolio</p></a>
+                <a href="about.html" class="ft_link"><p>About us</p></a>
+                <a href="contact.html" class="ft_link"><p>Contact us</p></a>
+            </div>
+            <div class="ft_t_cell_column">
+                <div class="ft_t_cell" id="ft_contact">
+                    <h5>Get In Touch</h5>
+                    <p>436 491 5000</p>
+                    <a href="mailto:"><p>info@powerhouse.com</p></a>
+                </div>
+                <div class="ft_t_cell" id="ft_address">
+                    <h5>Address</h5>
+                    <p>80 Portland Street <br> Toronto, ON M5V 2N2</p>
+                </div>
+            </div>
+            <div class="ft_t_cell">
+                <h5>More</h5>
+                <a href="newsletter.html"><p>Newsletter</p></a>
+                <a href="career.html"><p>Career</p></a>
+            </div>
         </div>
-        <p id="footer_copy">&copy; POWERHOUSE 2024. All rights reserved.</p>
+        <a href="home.html"><img src="images/branding/powerhouse logo text white.webp" alt="" id="footer_logo"></a>
+        <p id="footer_copy">&copy; POWERHOUSE 2024</p>
     </footer>
 </body>
 </html>

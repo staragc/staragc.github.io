@@ -1,0 +1,66 @@
+/*big desktop styling*/
+@media(min-width:1451px){
+    
+}
+
+
+/*regular desktop styling*/
+@media(max-width:1450px){
+    #newsletter{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    #newsletter_img img{
+        width: 100%;
+        min-width: 100%;
+        aspect-ratio: 10/4;
+        background-color: #2f2724;
+    }
+    
+    #newsletter_desc{
+        text-align: justify;
+        text-align-last: left;
+    }
+    
+    #newsletter form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    #newsletter form input, #newsletter form textarea{
+        padding: 5px 10px;
+        font-size: 25px;
+        font-family: "roboto light";
+        border: 1px solid #2f2724;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*bigger tablet styling*/
+@media(max-width:1079px){
+    #newsletter_img img{
+        aspect-ratio: 16/9;
+    }
+    #newsletter form{
+        width: 75%;
+    }
+}
+
+
+/*small tablet styling*/
+@media(max-width:625px){
+    #newsletter form{
+        width: 100%;
+    }
+}
+
+
+/*big phone styling*/
+@media(max-width:450px){
+    #newsletter_img img{
+        aspect-ratio: 4/5;
+    }
+}

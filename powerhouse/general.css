@@ -1,118 +1,62 @@
-/*general - start*/
-body{
-    margin: 0;
-}
-main{
-    min-height: 100vh;
-}
-/*general - end*/
-
-
 /*fonts - start*/
-@font-face {
-    font-family: "poppins regular";
-    src: url(fonts/Poppins-Medium.ttf);
-}
 @font-face {
     font-family: "poppins bold";
     src: url(fonts/Poppins-Bold.ttf);
 }
 @font-face {
-    font-family: "poppins light";
-    src: url(fonts/Poppins-Light.ttf);
+    font-family: "lato regular";
+    src: url(fonts/Lato-Regular.ttf);
 }
+@font-face {
+    font-family: "roboto regular";
+    src: url(fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "roboto light";
+    src: url(fonts/Roboto-Light.ttf);
+}
+
 h1, h2, h3, h4, h5{
-    font-weight: normal;
     font-family: "poppins bold";
     margin-top: 0;
+    color: #2f2724;
 }
 h1{
-    font-size: 60px;
-    margin-bottom: 20px;
-    line-height: 65px;
+    font-size: 70px;
+    line-height: 85px;
+    margin-bottom: 25px;
 }
 h2{
-    font-size: 40px;
-    margin-bottom: 15px;
-    line-height: 45px;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 20px;
 }
 h3{
-    font-size: 30px;
-    margin-bottom: 10px;
-    line-height: 35px;
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 15px;
 }
 h4{
-    font-size: 25px;
-    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 10px;
 }
 h5{
-    font-size: 20px;
+    font-size: 25px;
+    line-height: 30px;
     margin-bottom: 5px;
 }
-*{
-    font-size: 20px;
-    font-family: "poppins regular";
-}
-.section_title, .page_title{
-    font-family: "poppins light";
-    opacity: 0.75;
+p{
+    font-family: "roboto light";
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 0;
 }
 .page_title{
-    margin: 0;
+    -webkit-text-stroke: #2f2724 2px;
+    color: transparent;
 }
 /*fonts - end*/
-
-
-/*cta - start*/
-.cta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid;
-    width: fit-content;
-    padding: 10px 30px;
-    text-decoration: none;
-    position: relative;
-    background-color: transparent;
-    backdrop-filter: blur(2px);
-}
-.cta.white{
-    border-color: white;
-    color: white;
-}
-.cta.white:hover{
-    color: rgb(28, 28, 32);
-}
-.cta.black{
-    border-color: rgb(28, 28, 32);
-    color: rgb(28, 28, 32);
-}
-.cta.black:hover{
-    color: white;
-}
-.cta::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    transition: 0.5s;
-}
-.cta.white::before{
-    background-color: white;
-}
-.cta.black::before{
-    background-color: rgb(28, 28, 32);
-}
-.cta:hover::before{
-    width: 100%;
-}
-.cta p, .cta h1, .cta h2, .cta h3, .cta h4, .cta h5{
-    margin: 0;
-    z-index: 1;
-    transition: 0.5s;
-}
-/*cta - end*/
 
 
 /*sections - start*/
@@ -123,23 +67,82 @@ h5{
 .topped{
     padding-top: 100px;
 }
-.double_topped{
-    padding-top: 200px;
-}
-.half_topped{
-    padding-top: 50px;
-}
 .bottomed{
     padding-bottom: 100px;
+}
+.half_bottomed{
+    padding-bottom: 50px;
 }
 .double_bottomed{
     padding-bottom: 200px;
 }
 .dark{
-    background-color: rgb(28,28,32);
+    background-color: #2f2724;
     color: white;
 }
-/*sections - end*/
+/*sections - start*/
+
+
+/*cta hollow - start*/
+.cta{
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    display: flex;
+    width: fit-content;
+    text-decoration: none;
+    padding: 7.5px 20px;
+    position: relative;
+}
+.cta::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    transition: 0.5s;
+}
+.cta:hover::after{
+    width: 100%;
+}
+.cta.black::after{
+    background-color: #2f2724;
+}
+.cta.black{
+    border-color: #2f2724;
+    color: #2f2724;
+}
+.cta.white::after{
+    background-color: white;
+}
+.cta.white{
+    border-color: white;
+    color: white;
+}
+.cta p{
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    transition: 0.5s;
+}
+.cta.black:hover p{
+    color: white;
+}
+.cta.white:hover p{
+    color: #2f2724;
+}
+/*cta hollow - end*/
+
+
+/*general - start*/
+body{
+    margin: 0;
+}
+main{
+    min-height: 100vh;
+}
+/*general - end*/
 
 
 /*invite section - start*/
@@ -148,191 +151,173 @@ h5{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(images/invite_section/invite_section_desktop.webp);
     background-size: cover;
     background-position-x: left;
     text-align: center;
-}
-#invite h2, #invite h1{
+    background: url(images/section-invite/invite_section_desktop.webp);
     color: white;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    filter: grayscale(50%);
 }
-#invite .cta{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+#invite h4{
+    font-family: "roboto light";
 }
-#invite:hover .cta{
-    text-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+#invite h2, #invite h4{
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 /*invite section - end*/
 
 
-/*project holder - start*/
+/*team member - start*/
+.team_members{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.team_member{
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: calc((100%/3) - (100px/3));
+}
+.team_member img{
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: #2f2724;
+}
+.team_member h3{
+    text-align: center;
+    width: 100%;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    margin: -50px 0 0;
+}
+.team_member p{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+/*team member - end*/
+
+
+/*linear sections - start*/
+.linear{
+    display: flex;
+    gap: 50px;
+}
+.linear.reversed{
+    flex-direction: row-reverse;
+}
+.lr_title, .lr_txt{
+    max-width: calc(50% - 25px);
+}
+.lr_txt{
+    text-align: justify;
+    text-align-last: left;
+}
+/*linear sections - end*/
+
+
+/*portfolio - start*/
 .project_holder{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-bottom: 25px;
 }
 .project{
     width: calc(50% - 25px);
-    height: fit-content;
 }
 .project img{
     width: 100%;
+    aspect-ratio: 5/4;
+    background-color: #2f2724;
     margin-bottom: 10px;
-    background-color: rgb(28,28,32);
 }
-.project h3{
+.project p{
     margin: 0;
 }
-/*project holder - end*/
+/*portfolio - end*/
 
 
-/*staff section - start*/
-.team_member{
-    height: 430px;
-    width: calc(430px * (4/5));
-    aspect-ratio: 4/5;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+/*big desktop styling*/
+@media(min-width:1401px){
+    /*sections - start*/
+    .sided{
+        padding-left: calc((100vw - 1400px)/2);
+        padding-right: calc((100vw - 1400px)/2);
+    }
+    /*sections - start*/
 }
-.team_member img{
-    height: 430px;
-    width: calc(430px * (4/5));
-    aspect-ratio: 4/5;
-    background-color: red;
-}
-.team_member h1{
-    width: calc(100% * (5/4));
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 45px;
-    rotate: 90deg;
-    left: -54%;
-    margin: 0;
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-/*staff section - end*/
 
 
 /*bigger tablet styling*/
-@media(max-width:1079px){ 
+@media(max-width:1079px){
+    /*staff section - start*/
+    .team_member{
+        width: calc(50% - 25px);
+    }
+    /*staff section - end*/
 }
+
 
 /*big tablet styling*/
 @media(max-width:850px){
-    /*invite section - start*/
-    #invite{
-        background: url(images/invite_section/invite_section_tablet.webp);
+    /*linear sections - start*/
+    .linear{
+        flex-direction: column;
+        gap: 25px;
     }
-    /*invite section - end*/ 
-}
+    .lr_title, .lr_txt{
+        max-width: 100%;
+    }
+    /*linear sections - end*/ 
 
-/*regular tablet styling*/
-@media(max-width:775px){   
-    /*project holder - start*/
+
+    /*portfolio - start*/
     .project{
         width: 100%;
     }
-    /*project holder - end*/  
+    /*portfolio - end*/
+
+
+    /*invite section - start*/
+    #invite{
+        background: url(images/section-invite/invite_section_tablet.webp);
+    }
+    /*invite section - end*/    
 }
 
-/*small tablet styling*/
-@media(max-width:625px){
-}
 
 /*big phone styling*/
 @media(max-width:450px){
-    /*sections - start*/
-    .topped{
-        padding-top: 75px;
+    /*fonts - start*/ 
+    h1{
+        font-size: 55px;
+        line-height: 65px;
     }
-    .double_topped{
-        padding-top: 150px;
+    h2{
+        font-size: 45px;
+        line-height: 55px;
     }
-    .half_topped{
-        padding-top: calc(75px/2);
+    h3{
+        font-size: 35px;
+        line-height: 50px;
     }
-    .bottomed{
-        padding-bottom: 75px;
-    }
-    .double_bottomed{
-        padding-bottom: 150px;
-    }
-    /*sections - end*/
+    /*fonts - end*/
 
     
     /*invite section - start*/
     #invite{
-        background: url(images/invite_section/invite_section_mobile.webp);
+        background: url(images/section-invite/invite_section_mobile.webp);
     }
     /*invite section - end*/ 
 
     
     /*staff section - start*/
     .team_member{
-        height: 350px;
-        width: calc(350px * (4/5));
-    }
-    .team_member img{
-        height: 350px;
-        width: calc(350px * (4/5));
+        width: 100%;
     }
     /*staff section - end*/
-}
-
-/*regular phone styling*/
-@media(max-width:400px){
-    /*fonts - start*/
-    h1{
-        font-size: 55px;
-    }
-    h2{
-        font-size: 37.5px;
-    }
-    h3{
-        font-size: 27.5px;
-    }
-    /*fonts - end*/
-}
-
-/*small phone styling*/
-@media(max-width:380px){
-    /*fonts - start*/
-    h1{
-        font-size: 50px;
-    }
-    h2{
-        font-size: 35px;
-    }
-    /*fonts - end*/
-
-
-    /*sections - start*/
-    .topped{
-        padding-top: 60px;
-    }
-    .double_topped{
-        padding-top: 120px;
-    }
-    .half_topped{
-        padding-top: 30px;
-    }
-    .bottomed{
-        padding-bottom: 60px;
-    }
-    .double_bottomed{
-        padding-bottom: 120px;
-    }
-    /*sections - end*/
-}
-
-/*narrow phone styling*/
-@media(max-width:350px){
 }

@@ -109,10 +109,10 @@
 @media(max-width:1079px){
     /*value proposition - start*/
     .vp_cell:nth-child(1), .vp_cell:nth-child(2){
-        width: calc(50% - 25px);
+        width: calc(50% - (25px/2) - 50px);
     }
     .vp_cell:nth-child(3){
-        width: 100%;
+        width: calc(100% - 50px);
     }
     /*value proposition - end*/
 

@@ -157,37 +157,34 @@ main{
     transform: translateY(-100%);
     transition: 1s;
     pointer-events: none;
+    cursor: default;
+    user-select: none;
 }
 #preloader.on{
     transform: translateY(0);
 }
-#preloader_txt{
+#preloader img{
     position: absolute;
     bottom: 0;
-}
-#preloader.on #preloader_txt{
-    animation: preloaderAnim 2.5s linear infinite;
-}
-#preloader_txt img{
     max-width: 100%;
 }
-#preloader_txt h3{
-    margin: 0;
+#preloader.on #preloader img{
+    animation: preloaderAnim 2.5s linear infinite;
 }
 @keyframes preloaderAnim {
     from{
         opacity: 1;
     }
-    5%{
+    7.5%{
         opacity: 1;
     }
-    45%{
-        opacity: 0;
+    47.5%{
+        opacity: 0.25;
     }
-    55%{
-        opacity: 0;
+    52.5%{
+        opacity: 0.25;
     }
-    95%{
+    92.5%{
         opacity: 1;
     }
     to{

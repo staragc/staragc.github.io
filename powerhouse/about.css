@@ -99,10 +99,10 @@
 @media(max-width:1079px){
     /*services section - start*/
     .srv_cell{
-        width: calc(50% - 25px);
+        width: calc(50% - (25px/2) - 50px);
     }
     .srv_cell:last-child{
-        width: 100%;
+        width: calc(100% - 50px);
     }
     /*services section - end*/
     

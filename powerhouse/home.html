@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="POWERHOUSE is an architectural design firm that creates commercial, cultural and residential projects based on inclusivity, sustainability and technology to make the creations impactful and long-lasting">
+    <meta name="description" content="POWERHOUSE is a architectural design firm that creates commercial and residential projects based on inclusivity, sustainability and technology to make the creations impactful and long-lasting">
     <!--local JavaScript-->
+    <script defer src="general.js"></script>
     <script defer src="navigation.js"></script>
     <script defer src="scrollAnim.js"></script>
+    <script defer src="home.js"></script>
     <!--local CSS-->
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="navigation.css">
@@ -42,21 +44,39 @@
             <li class="mbl_nav_link"><a href="contact.html"><p>Contact us</p></a></li>
         </ul>
     </nav>
+    <div id="preloader" class="on">
+        <div id="preloader_txt" class="sided bottomed">
+            <img src="images/branding/powerhouse logo text dark.webp" alt="powerhouse full logo">
+            <h3>Home</h3>
+        </div>
+    </div>
 
     <main>
         <section id="hero" class="sided topped double_bottomed">
-            <picture id="hero_img">
+            <picture class="hero_img">
                 <source media="(min-width:1080px)" srcset="images/home/hero/hero-desktop.webp">
                 <source media="(min-width:451px) and (max-width:1079px)" srcset="images/home/hero/hero-tablet.webp">
                 <source media="(max-width:450px)" srcset="images/home/hero/hero-phone.webp">
                 <img src="images/home/hero/hero-desktop.webp" alt="a picture of a modern residential building complex concept created by AMR Maged on Behance">
+            </picture>
+            <picture class="hero_img">
+                <source media="(min-width:1080px)" srcset="images/home/hero/hero-desktop2.webp">
+                <source media="(min-width:451px) and (max-width:1079px)" srcset="images/home/hero/hero-tablet2.webp">
+                <source media="(max-width:450px)" srcset="images/home/hero/hero-phone2.webp">
+                <img src="images/home/hero/hero-desktop2.webp" alt="a picture of a modern residential building complex concept created by AMR Maged on Behance">
+            </picture>
+            <picture class="hero_img">
+                <source media="(min-width:1080px)" srcset="images/home/hero/hero-desktop3.webp">
+                <source media="(min-width:451px) and (max-width:1079px)" srcset="images/home/hero/hero-tablet3.webp">
+                <source media="(max-width:450px)" srcset="images/home/hero/hero-phone3.webp">
+                <img src="images/home/hero/hero-desktop3.webp" alt="a picture of a modern residential building complex concept created by AMR Maged on Behance">
             </picture>
             <div id="hero_txt" class="linear animated slide_up">
                 <h1 class="lr_title">We Design Your Dreams Into Reality</h1>
                 <div class="lr_txt">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus unde tempora magni obcaecati sit, soluta debitis officiis doloribus eligendi aut consequatur, eveniet fuga hic reprehenderit magnam odit nisi dicta!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis fugit sunt temporibus commodi at distinctio obcaecati veniam modi assumenda, quibusdam est suscipit ducimus recusandae nobis corporis pariatur, quidem, voluptatem iure.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis fugit sunt temporibus commodi at distinctio obcaecati veniam modi assumenda.
                     </p>
                     <a href="about.html" class="cta black"><p>More About Us</p></a>
                 </div>
@@ -68,15 +88,15 @@
             <div id="vp_grid" class="animated slide_up">
                 <div class="vp_cell">
                     <h4>Ecology</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi aperiam animi sed eveniet eaque accusantium molestiae incidunt laborum aliquid, voluptates quod iusto porro. Aliquam adipisci aspernatur et nostrum ad.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quasi aperiam animi sed eveniet eaque accusantium molestiae incidunt laborum aliquid.</p>
                 </div>
                 <div class="vp_cell">
                     <h4>Sustainability</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias corporis hic quia illo, consequuntur velit laudantium accusamus ex veritatis adipisci voluptas cupiditate harum dicta asperiores vel optio atque libero veniam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias corporis hic quia illo, consequuntur velit laudantium accusamus ex veritatis adipisc.</p>
                 </div>
                 <div class="vp_cell">
                     <h4>Inclusivity</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ipsum labore, perspiciatis voluptatem aliquam, eligendi veniam doloribus ea iste ullam rerum in quae voluptates itaque optio iusto nemo possimus repellendus!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ipsum labore, perspiciatis voluptatem aliquam, eligendi veniam doloribus ea iste!</p>
                 </div>
             </div>
         </section>

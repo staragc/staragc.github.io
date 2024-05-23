@@ -14,24 +14,6 @@
 /*philosophy section - end*/
     
     
-/*services section - start*/
-#services p{
-    text-align: justify;
-    text-align-last: left;
-}
-#services_grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-.srv_cell{
-    width: calc((100%/3) - 50px - (50px/3));
-    padding: 25px;
-    background-color: rgba(47, 39, 36, 0.125);
-}
-/*services section - end*/
-    
-    
 /*framework section - start*/
 #framework p{
     text-align: justify;
@@ -96,17 +78,7 @@
 
 
 /*bigger tablet styling*/
-@media(max-width:1079px){
-    /*services section - start*/
-    .srv_cell{
-        width: calc(50% - (25px/2) - 50px);
-    }
-    .srv_cell:last-child{
-        width: calc(100% - 50px);
-    }
-    /*services section - end*/
-    
-    
+@media(max-width:1079px){  
     /*philosophy section - start*/
     #phl_content, #hst_content{
         flex-direction: column;
@@ -156,13 +128,7 @@
 
 
 /*regular tablet styling*/
-@media(max-width:775px){
-    /*services section - start*/
-    .srv_cell, .srv_cell:last-child{
-        width: 100%;
-    }
-    /*services section - end*/
-    
+@media(max-width:775px){    
     /*framework section - start*/
     #framework_content{
         display: block;

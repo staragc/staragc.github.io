@@ -166,9 +166,9 @@ main{
 #preloader img{
     position: absolute;
     bottom: 0;
-    max-width: 100%;
+    max-width: 90vw;
 }
-#preloader.on #preloader img{
+#preloader.on img{
     animation: preloaderAnim 2.5s linear infinite;
 }
 @keyframes preloaderAnim {
@@ -179,10 +179,10 @@ main{
         opacity: 1;
     }
     47.5%{
-        opacity: 0.25;
+        opacity: 0.5;
     }
     52.5%{
-        opacity: 0.25;
+        opacity: 0.5;
     }
     92.5%{
         opacity: 1;
@@ -269,6 +269,59 @@ main{
 /*linear sections - end*/
 
 
+/*list img slider - start*/
+.ls_img_content{
+    display: flex;
+    gap: 50px;
+}
+
+.ls_img_selectors{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.ls_img_header{
+    padding: 5px 15px;
+    background-color: #2f2724;
+    cursor: pointer;
+}
+.ls_img_header h4{
+    margin: 0;
+    color: white;
+}
+.ls_img_cell_content{
+    background-color: #f7f4ed;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.ls_img_cell_content p{
+    margin: 0;
+    padding: 15px;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.ls_img_slider{
+    width: 550px;
+    min-width: 550px;
+    height: calc(550px * (4/5));
+    background-color: #2f2724;
+    overflow-x: hidden;
+}
+.ls_img_slider_imgs{
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    aspect-ratio: inherit;
+    transition: 0.25s;
+}
+.ls_img_slider_imgs img{
+    width: 550px;
+    min-width: 550px;
+}
+/*list img slider - end*/
+
+
 /*portfolio - start*/
 .project_holder{
     display: flex;
@@ -308,6 +361,23 @@ main{
         width: calc(50% - 25px);
     }
     /*staff section - end*/
+
+
+    /*list img slider - start*/
+    .ls_img_content{
+        flex-direction: column-reverse;
+    }
+
+    .ls_img_slider{
+        width: 90vw;
+        min-width: 90vw;
+        height: calc(90vw * (9/16));
+    }
+    .ls_img_slider_imgs img{
+        width: 90vw;
+        min-width: 90vw;
+    }
+    /*list img slider - end*/
 }
 
 
@@ -374,4 +444,21 @@ main{
         width: 100%;
     }
     /*staff section - end*/
+
+
+    /*list img slider - start*/
+    .ls_img_content{
+        flex-direction: column-reverse;
+    }
+
+    .ls_img_slider{
+        width: 100%;
+        min-width: 100%;
+        height: calc(90vw * (5/4));
+    }
+    .ls_img_slider_imgs img{
+        width: 90vw;
+        min-width: 90vw;
+    }
+    /*list img slider - end*/
 }

@@ -20,24 +20,6 @@
 /*portfolio section - end*/
     
     
-/*value proposition - start*/
-#vp_grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-.vp_cell{
-    width: calc((100%/3) - 50px - (50px/3));
-    padding: 25px;
-    background-color: rgba(47, 39, 36, 0.125);
-}
-.vp_cell p{
-    text-align: justify;
-    text-align-last: left;
-}
-/*value proposition - end*/
-    
-    
 /*testimonials section - start*/
 #testimonials{
     padding-left: 5vw;
@@ -107,16 +89,6 @@
 
 /*bigger tablet styling*/
 @media(max-width:1079px){
-    /*value proposition - start*/
-    .vp_cell:nth-child(1), .vp_cell:nth-child(2){
-        width: calc(50% - (25px/2) - 50px);
-    }
-    .vp_cell:nth-child(3){
-        width: calc(100% - 50px);
-    }
-    /*value proposition - end*/
-
-
     /*testimonials section - start*/
     #testimonials{
         flex-direction: column;
@@ -133,16 +105,6 @@
 
 /*small tablet styling*/
 @media(max-width:625px){
-    /*value proposition - start*/
-    #vp_grid{
-        gap: 25px;
-    }
-    .vp_cell:nth-child(1), .vp_cell:nth-child(2), .vp_cell:nth-child(3){
-        width: 100%;
-    }
-    /*value proposition - end*/
-
-
     /*testimonials section - start*/
     #testimonials{
         flex-direction: column;

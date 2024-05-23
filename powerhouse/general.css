@@ -344,13 +344,22 @@ main{
 
 
 /*big desktop styling*/
-@media(min-width:1401px){
+@media(min-width:1376px){
     /*sections - start*/
     .sided{
-        padding-left: calc((100vw - 1400px)/2);
-        padding-right: calc((100vw - 1400px)/2);
+        padding-left: calc((100vw - 1375px)/2);
+        padding-right: calc((100vw - 1375px)/2);
     }
     /*sections - start*/
+
+
+    /*invite section - start*/
+    #invite{
+        background: url(images/section-invite/invite_section_big_desktop.webp);
+        background-position: center;
+        background-size: cover;
+    }
+    /*invite section - end*/
 }
 
 

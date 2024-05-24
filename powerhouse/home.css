@@ -9,8 +9,34 @@
 }
 .hero_img img{
     width: 100%;
+    border-radius: 10px;
 }
 /*hero section - end*/
+
+
+/*value proposition section - start*/
+#vp_desc{
+    text-align: justify;
+    text-align-last: left;
+}
+#vp_grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+.vp_cell{
+    width: calc((100%/3) - (100px/3) - 50px);
+    padding: 25px;
+    background-color: rgba(47, 39, 36, 0.0625);
+    border-radius: 10px;
+}
+.vp_cell p{
+    text-align: justify;
+    text-align-last: left;
+    margin: 0;
+}
+/*value proposition section - end*/
     
     
 /*portfolio section - start*/
@@ -44,7 +70,8 @@
 .comment{
     background-color: rgba(47, 39, 36, 0.125);
     padding: 25px;
-    width: 500px;
+    width: 475px;
+    border-radius: 10px;
 }
 .cmt_author{
     display: flex;
@@ -89,12 +116,37 @@
 
 /*bigger tablet styling*/
 @media(max-width:1079px){
+    /*hero section - start*/
+    .hero_img{
+        margin-bottom: 25px;
+    }
+    #hero h1{
+        margin: 0;
+    }
+    /*hero section - end*/
+
+    
     /*testimonials section - start*/
     #testimonials{
         flex-direction: column;
         gap: 25px;
     }
+    #testimonials h2{
+        min-width: auto;
+        padding-right: 5vw;
+        margin-bottom: 0;
+    }
     /*testimonials section - end*/
+
+
+    /*value proposition section - start*/
+    #vp_grid{
+        gap: 25px;
+    }
+    .vp_cell{
+        width: calc(100% - 50px);
+    }
+    /*value proposition section - end*/
 }
 
 

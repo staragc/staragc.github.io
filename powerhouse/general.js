@@ -13,6 +13,11 @@ const lsImgCells = Array.from(document.querySelectorAll(".ls_img_cell"));
 let lsImgCellId = 0;
 let currentLsImgCellId = 10;
 
+let lsImgAutoScroll = setInterval(() => {
+    lsImgCellId++;
+    selectLsImgCell();
+}, 15000);
+
 function selectLsImgCell(){
     for (let i = 0; i < lsImgCells.length; i++) {
         //filter id
@@ -52,6 +57,11 @@ function selectLsImgCell(){
                     LsImgsEl.style.opacity = "1";
                 }, 50);
             })
+            clearInterval(lsImgAutoScroll);
+            lsImgAutoScroll = setInterval(() => {
+                lsImgCellId++;
+                selectLsImgCell();
+            }, 15000);
         }
         setTimeout(() => {
             currentLsImgCellId = lsImgCellId;            
@@ -65,9 +75,4 @@ for (let i = 0; i < lsImgCells.length; i++) {
         selectLsImgCell();
     })    
 }
-
-let lsImgAutoScroll = setInterval(() => {
-    lsImgCellId++;
-    selectLsImgCell();
-}, 15000);
 /*list image - end*/

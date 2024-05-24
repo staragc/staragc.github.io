@@ -1,3 +1,29 @@
+/*about section - start*/
+#abt_img{
+    background-color: #2f2724;
+    width: 90vw;
+    height: calc(90vw * (9/19));
+}
+/*about section - end*/
+
+
+/*awards section - start*/
+#awards_holder{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.award{
+    display: flex;
+    gap: 100px;
+}
+.award p{
+    text-align: justify;
+    text-align-last: left;
+}
+/*awards section - end*/
+
+
 /*philosophy section - start*/
 #phl_content, #hst_content{
     display: flex;
@@ -6,6 +32,7 @@
 #phl_img img, #hst_img img{
     width: 550px;
     min-width: 550px;
+    border-radius: 10px;
 }
 #phl_txt p, #hst_txt p{
     text-align: justify;

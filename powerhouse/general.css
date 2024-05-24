@@ -88,6 +88,7 @@ p{
     background-color: transparent;
     border-width: 2px;
     border-style: solid;
+    border-radius: 10px;
     display: flex;
     width: fit-content;
     text-decoration: none;
@@ -205,7 +206,7 @@ main{
     text-align: center;
     background: url(images/section-invite/invite_section_desktop.webp);
     color: white;
-    filter: grayscale(50%);
+    filter: grayscale(25%);
 }
 #invite h4{
     font-family: "roboto light";
@@ -235,6 +236,7 @@ main{
     width: 100%;
     aspect-ratio: 4/5;
     background-color: #2f2724;
+    border-radius: 10px;
 }
 .team_member h3{
     text-align: center;
@@ -280,6 +282,10 @@ main{
     flex-direction: column;
     gap: 25px;
 }
+.ls_img_cell{
+    border-radius: 10px;
+    overflow: hidden;
+}
 .ls_img_header{
     padding: 5px 15px;
     background-color: #2f2724;
@@ -306,14 +312,15 @@ main{
     min-width: 550px;
     height: calc(550px * (4/5));
     background-color: #2f2724;
-    overflow-x: hidden;
+    overflow: hidden;
+    border-radius: 10px;
 }
 .ls_img_slider_imgs{
     display: flex;
     flex-wrap: nowrap;
     width: fit-content;
     aspect-ratio: inherit;
-    transition: 0.25s;
+    transition: 0.35s;
 }
 .ls_img_slider_imgs img{
     width: 550px;
@@ -336,6 +343,7 @@ main{
     aspect-ratio: 5/4;
     background-color: #2f2724;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 .project p{
     margin: 0;
@@ -375,6 +383,7 @@ main{
     /*list img slider - start*/
     .ls_img_content{
         flex-direction: column-reverse;
+        gap: 25px;
     }
 
     .ls_img_slider{
@@ -420,6 +429,20 @@ main{
 
 /*small tablet styling*/
 @media(max-width:625px){
+    /*sections - start*/
+    .topped{
+        padding-top: 80px;
+    }
+    .bottomed{
+        padding-bottom: 80px;
+    }
+    .half_bottomed{
+        padding-bottom: 40px;
+    }
+    .double_bottomed{
+        padding-bottom: 160px;
+    }
+    /*sections - start*/
 }
 
 

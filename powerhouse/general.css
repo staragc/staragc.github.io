@@ -103,6 +103,7 @@ p{
     width: 0%;
     height: 100%;
     transition: 0.5s;
+    border-radius: 8px;
 }
 .cta:hover::after{
     width: 100%;
@@ -283,7 +284,7 @@ main{
     gap: 25px;
 }
 .ls_img_cell{
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
 }
 .ls_img_header{
@@ -486,7 +487,7 @@ main{
     .ls_img_slider{
         width: 100%;
         min-width: 100%;
-        height: calc(90vw * (5/4));
+        height: calc(90vw * (4/5));
     }
     .ls_img_slider_imgs img{
         width: 90vw;

@@ -1,5 +1,5 @@
 /*desktop nav - start*/
-const desktopNav = document.getElementById("desktop_nav");
+/*const desktopNav = document.getElementById("desktop_nav");
 //animate nav bar on scroll
 let lastScroll = window.scrollY;
 function hideDesktopNav(){
@@ -16,7 +16,7 @@ window.addEventListener("scroll", () =>{
         hideDesktopNav();
     }
     lastScroll = window.scrollY;
-})
+})*/
 /*desktop nav - end*/
 
 

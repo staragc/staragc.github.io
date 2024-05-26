@@ -205,6 +205,13 @@
     }
     /*philosophy section - end*/
 
+
+    /*awards section - start*/
+    .award{
+        gap: 25px;
+    }
+    /*awards section - end*/
+
     
     /*staff section - start*/
     .team_member{

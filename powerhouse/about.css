@@ -219,3 +219,14 @@
     }
     /*staff section - end*/
 }
+
+
+/*very narrow phone styling*/
+@media(max-width:350px){
+    /*awards section - start*/
+    .award{
+        flex-direction: column;
+        gap: 10px;
+    }
+    /*awards section - end*/    
+}

@@ -118,7 +118,7 @@ footer h4, footer h5{
 
 
 /*big desktop styling*/
-@media(min-width:1451px){
+@media(min-width:1376px){
     /*desktop nav - start*/
     #desktop_nav{
         padding: 20px calc((100vw - 1400px)/2);

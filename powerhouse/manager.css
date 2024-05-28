@@ -1,0 +1,428 @@
+/*nav button - start*/
+#mng_nav_btn{
+    width: 45px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    position: fixed;
+    left: 5vw;
+    top: 20px;
+    z-index: 100;
+}
+.mng_nb_bar{
+        position: absolute;
+        width: 45px;
+        height: 4px;
+        background-color: #2f2724;
+        transition: 0.5s;
+}
+.mng_nb_bar:nth-child(1){
+        margin-bottom: 35px;
+}
+.mng_nb_bar:nth-child(3){
+        margin-top: 35px;
+}
+
+#mng_nav_btn:hover .mng_nb_bar:nth-child(1), #mng_nav_btn:hover .mng_nb_bar:nth-child(3){
+    width: 15px;
+}
+#mng_nav_btn:hover .mng_nb_bar:nth-child(2){
+    width: 35px;
+}
+
+#mng_nav_btn.on .mng_nb_bar, #mng_nav_btn.on:hover .mng_nb_bar{
+    width: 45px;
+}
+#mng_nav_btn.on .mng_nb_bar:nth-child(1){
+        rotate: 45deg;
+        margin: 0;
+}
+#mng_nav_btn.on .mng_nb_bar:nth-child(2){
+        opacity: 0;
+}
+#mng_nav_btn.on .mng_nb_bar:nth-child(3){
+        rotate: -45deg;
+        margin: 0;
+}
+/*nav button - end*/
+
+
+/*nav menu - start*/
+#mng_nav{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 100px 5vw 5vw;
+    background-color: #f7f4ed;
+    min-width: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
+    transform: translateX(calc(-100% - 15px));
+    transition: 0.75s;
+}
+#mng_nav.on{
+    transform: translateX(0);
+}
+#mng_nav_logo{
+    height: 40px;
+    margin-bottom: 12.5px;
+}
+#mng_nav ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mng_nav_btn{
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+.mng_nav_btn, .mng_nav_btn p{
+    transition: 0.25s;
+}
+.mng_nav_btn p{
+    margin: 0;
+}
+.mng_nav_btn:hover, .mng_nav_btn.current{
+    background-color: #2f2724;
+}
+.mng_nav_btn:hover p, .mng_nav_btn.current p{
+    color: white;
+}
+/*nav menu - end*/
+
+
+/*pages - start*/
+#pages_holder > :not(.mng_page:first-child){
+    display: none;
+}
+.mng_page{
+    min-height: calc(100vh - 200px);
+}
+.mng_page_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+/*pages - end*/
+
+
+/*new element form - start*/
+.mng_new_el{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.mng_new_el_header{
+    padding: 10px 20px;
+    background-color: #2f2724;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 12.5px;
+}
+.mng_new_el_header h3{
+    color: white;
+    margin: 0;
+}
+.mng_dd_indicator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+.mng_ddi_bar{
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    transition: 0.25s;
+}
+.mng_ddi_bar:nth-child(2){
+    rotate: 90deg;
+}
+.on .mng_dd_indicator .mng_ddi_bar:nth-child(2){
+    rotate: 0deg;
+}
+
+.mng_new_el_content{
+    overflow-y: hidden;
+    width: 100%;
+}
+.mng_new_el_content form{
+    background-color: #f7f4ed;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.mng_new_el_content form input, .mng_new_el_content form textarea, .mng_new_el_content form select{
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    font-size: 20px;
+    box-sizing: inherit;
+    border-radius: 5px;
+    font-family: "roboto light";
+}
+.single_input{
+    width: calc(100% - 22px);
+}
+.double_input{
+    width: calc(50% - 22px - (15px/2));
+}
+/*new element form - end*/
+
+
+/*modals - start*/
+.mng_modal_bcg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1px);
+    z-index: 109;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.mng_modal_bcg.on{
+    opacity: 1;
+    pointer-events: auto;
+}
+.mng_modal{
+    padding: 25px;
+    background-color: white;
+    position: fixed;
+    transform: translate(-50%, calc(-50% - 15px));
+    top: 50%;
+    left: 50%;
+    z-index: 110;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+.mng_modal.on{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: auto;
+}
+/*modals - end*/
+
+
+/*delete modal - start*/
+#del_modal h4{
+    text-align: center;
+}
+#del_modal_txt{
+    text-align: justify;
+    text-align-last: center;
+    width: 400px;
+    margin: 0 0 15px;
+}
+#del_modal_btns{
+    justify-content: center;
+}
+/*delete modal - end*/
+
+
+/*footer - start*/
+footer{
+    background-color: #2f2724;
+    padding: 5vw;
+}
+footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: baseline;
+    list-style-type: none;
+    padding: 0;
+}
+footer ul a{
+    text-decoration: none;
+}
+footer ul p{
+    margin: 0;
+    color: white;
+}
+/*footer - end*/
+
+
+/*buttons - start*/
+.el_btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/*buttons - end*/
+
+
+/*projects page - start*/
+.mng_project{
+    display: flex;
+    gap: 25px;
+    width: calc(100% - 50px);
+    padding: 25px;
+    background-color: #f7f4ed;
+    border-radius: 5px;
+}
+.mng_project img{
+    width: 350px;
+    min-width: 350px;
+    aspect-ratio: 3/2;
+    background-color: #2f2724;
+    border-radius: 5px;
+}
+/*projects page - end*/
+
+
+/*team, comments & users - start*/
+.mng_team_member, .mng_cmt, .mng_user{
+    width: calc(50% - 50px - 25px);
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #f7f4ed;
+}
+/*team, comments & users - end*/
+
+
+/*team page - start*/
+.mng_team_member{
+    display: flex;
+    gap: 25px;
+}
+.mng_team_member img{
+    width: 200px;
+    min-width: 200px;
+    aspect-ratio: 4/5;
+    background-color: #2f2724;
+}
+/*team page - end*/
+
+
+/*comments page - start*/
+.cmt_header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.cmt_header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #2f2724;
+}
+.mng_cmt p{
+    text-align: justify;
+    text-align-last: left;
+}
+/*comments page - end*/
+
+
+/*user page - start*/
+/*user page - end*/
+
+
+/*big desktop styling*/
+@media(min-width:1376px){
+    /*nav btn - start*/
+    #mng_nav_btn{
+        left: calc((100vw - 1375px)/2);
+    }
+    /*nav btn - end*/
+
+
+    /*nav menu - start*/
+    #mng_nav{
+        padding-left: calc((100vw - 1375px)/2);
+        transform: translateX(-50px);
+        opacity: 0;
+        pointer-events: none;
+    }
+    #mng_nav.on{
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+    /*nav menu - end*/
+}
+
+
+/*bigger tablet styling*/
+@media(max-width:1079px){
+    /*team, comments & users - start*/
+    .mng_project, .mng_team_member, .mng_cmt, .mng_user{
+        width: calc(100% - 50px);
+    }
+    /*team, comments & users - end*/
+}
+
+
+/*big tablet styling*/
+@media(max-width:850px){
+    /*pages - start*/
+    .mng_page_content{
+        gap: 25px;
+    }
+    /*pages - end*/
+}
+
+
+/*small tablet styling*/
+@media(max-width:625px){
+    /*new element form - start*/
+    .single_input, .double_input{
+        width: calc(100% - 22px);
+    }
+    /*new element form - end*/
+
+
+    /*projects page - start*/
+    .mng_project{
+        flex-direction: column;
+    }
+    .mng_project img{
+        width: 100%;
+        min-width: 100%;
+    }
+    /*projects page - end*/
+}
+
+
+/*big phone styling*/
+@media(max-width:450px){
+    /*delete modal - start*/
+    #del_modal_txt{
+        width: calc(90vw - 50px);
+    }
+    /*delete modal - end*/
+
+
+    /*team page - start*/
+    .mng_team_member{
+        flex-direction: column;
+    }
+    .mng_team_member img{
+        width: 100%;
+        min-width: 100%;
+    }
+    /*team page - end*/
+}

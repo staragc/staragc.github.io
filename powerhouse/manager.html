@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="POWERHOUSE is an architectural design firm that creates commercial, cultural and residential projects based on inclusivity, sustainability and technology to make the creations impactful and long-lasting">
+    <!--local JavaScript-->
+    <script defer src="general.js"></script>
+    <script defer src="manager.js"></script>
+    <!--local CSS-->
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="manager.css">
+    <!--tab elements-->
+    <link rel="shortcut icon" href="images/branding/favicon.webp" type="image/x-icon">
+    <title>Manager | POWERHOUSE Architectural Design Firm</title>
+</head>
+<body>
+    <div id="mng_nav_btn">
+        <div class="mng_nb_bar"></div>
+        <div class="mng_nb_bar"></div>
+        <div class="mng_nb_bar"></div>
+    </div>    
+    <nav id="mng_nav" class="">
+        <img src="images/branding/powerhouse logo text dark.webp" alt="" id="mng_nav_logo">
+        <ul>
+            <li class="mng_nav_btn current"><p>Projects</p></li>
+            <li class="mng_nav_btn"><p>Team Members</p></li>
+            <li class="mng_nav_btn"><p>Comments</p></li>
+            <li class="mng_nav_btn"><p>Users</p></li>
+        </ul>
+    </nav>
+
+    <div id="del_modal_bcg" class="mng_modal_bcg"></div>
+    <div id="del_modal" class="mng_modal">
+        <h4>Delete This Element?</h4>
+        <p id="del_modal_txt">Are you sure you want to delete this element permanently? You won't be able to recover it after.</p>
+        <div id="del_modal_btns" class="el_btns">
+            <button class="cta_full black"><p>No</p></button>
+            <button class="cta_full red"><p>Yes</p></button>
+        </div>
+    </div>
+
+    <main>
+        <section class="mng_page sided topped bottomed" id="projects_page">
+            <h1 class="page_title">Projects</h1>
+            
+            <div class="mng_new_el">
+                <div class="mng_new_el_header">
+                    <h3>Add New Project</h3>
+                    <div class="mng_dd_indicator">
+                        <div class="mng_ddi_bar"></div>
+                        <div class="mng_ddi_bar"></div>
+                    </div>
+                </div>
+                <div class="mng_new_el_content">
+                    <form action="">
+                        <input type="text" name="new_prj_name" id="new_prj_name" class="single_input" placeholder="Name">
+                        <select name="new_prj_category" id="new_prj_category" class="double_input">
+                            <option value="new_prj_category1"><p>Residential</p></option>
+                            <option value="new_prj_category2"><p>Commercial</p></option>
+                        </select>
+                        <select name="new_prj_status" id="new_prj_category" class="double_input">
+                            <option value="new_prj_status1"><p>Ongoing</p></option>
+                            <option value="new_prj_status2"><p>Completed</p></option>
+                        </select>
+                        <textarea name="new_prj_desc" id="new_prj_desc" cols="30" rows="7" class="single_input" placeholder="Description"></textarea>
+                        <input type="file" name="new_prj_img" id="new_prj_img" class="single_input">
+                        <button type="submit" class="cta_full black"><p>Create Element</p></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mng_page_content">
+                <div class="mng_project">
+                    <img src="" alt="">
+                    <div class="mng_project_txt">
+                        <h4>Lorem ipsum dolor, sit amet.</h4>
+                        <p>Residential, Complete</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>    
+                <div class="mng_project">
+                    <img src="" alt="">
+                    <div class="mng_project_txt">
+                        <h4>Lorem ipsum dolor, sit amet.</h4>
+                        <p>Residential, Complete</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>    
+                <div class="mng_project">
+                    <img src="" alt="">
+                    <div class="mng_project_txt">
+                        <h4>Lorem ipsum dolor, sit amet.</h4>
+                        <p>Residential, Complete</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>    
+                <div class="mng_project">
+                    <img src="" alt="">
+                    <div class="mng_project_txt">
+                        <h4>Lorem ipsum dolor, sit amet.</h4>
+                        <p>Residential, Complete</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+
+        <section class="mng_page sided topped bottomed" id="team_page">
+            <h1 class="page_title">Team Members</h1>
+            
+            <div class="mng_new_el">
+                <div class="mng_new_el_header">
+                    <h3>Add New Team Member</h3>
+                    <div class="mng_dd_indicator">
+                        <div class="mng_ddi_bar"></div>
+                        <div class="mng_ddi_bar"></div>
+                    </div>
+                </div>
+                <div class="mng_new_el_content">
+                    <form action="">
+                        <input type="text" name="new_team_name" id="new_team_name" class="double_input" placeholder="Name">
+                        <input type="file" name="new_team_pfp" id="new_team_pfp" class="double_input" placeholder="Profile Picture">
+                        <input type="text" name="new_team_position" id="new_team_position" class="single_input" placeholder="Position">
+                        <button type="submit" class="cta_full black"><p>Create Element</p></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mng_page_content">
+                <div class="mng_team_member">
+                    <img src="" alt="">
+                    <div class="mng_team_member_txt">
+                        <h4>John Doe</h4>
+                        <p>CEO</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mng_team_member">
+                    <img src="" alt="">
+                    <div class="mng_team_member_txt">
+                        <h4>John Doe</h4>
+                        <p>CEO</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mng_team_member">
+                    <img src="" alt="">
+                    <div class="mng_team_member_txt">
+                        <h4>John Doe</h4>
+                        <p>CEO</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mng_team_member">
+                    <img src="" alt="">
+                    <div class="mng_team_member_txt">
+                        <h4>John Doe</h4>
+                        <p>CEO</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mng_team_member">
+                    <img src="" alt="">
+                    <div class="mng_team_member_txt">
+                        <h4>John Doe</h4>
+                        <p>CEO</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mng_team_member">
+                    <img src="" alt="">
+                    <div class="mng_team_member_txt">
+                        <h4>John Doe</h4>
+                        <p>CEO</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mng_team_member">
+                    <img src="" alt="">
+                    <div class="mng_team_member_txt">
+                        <h4>John Doe</h4>
+                        <p>CEO</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mng_team_member">
+                    <img src="" alt="">
+                    <div class="mng_team_member_txt">
+                        <h4>John Doe</h4>
+                        <p>CEO</p>
+                        <div class="el_btns">
+                            <button class="cta_full black"><p>Edit</p></button>
+                            <button class="cta_full black"><p>Delete</p></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mng_page sided topped bottomed" id="comments_page">
+            <h1 class="page_title">Comments</h1>
+            
+            <div class="mng_new_el">
+                <div class="mng_new_el_header">
+                    <h3>Add New Comment</h3>
+                    <div class="mng_dd_indicator">
+                        <div class="mng_ddi_bar"></div>
+                        <div class="mng_ddi_bar"></div>
+                    </div>
+                </div>
+                <div class="mng_new_el_content">
+                    <form action="">
+                        <input type="text" name="new_cmt_name" id="new_cmt_name" class="double_input" placeholder="Name">
+                        <input type="file" name="new_cmt_pfp" id="new_cmt_pfp" class="double_input" placeholder="Profile Picture">
+                        <input type="text" name="new_cmt_highlight" id="new_cmt_highlight" class="single_input" placeholder="Highlight">
+                        <textarea name="new_cmt_content" id="new_cmt_content" cols="30" rows="5" class="single_input" placeholder="Content"></textarea>
+                        <button type="submit" class="cta_full black"><p>Create Element</p></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mng_page_content">
+                <div class="mng_cmt">
+                    <div class="cmt_header">
+                        <img src="" alt="">
+                        <h4>John Doe</h4>
+                    </div>
+                    <h5>Best Architecture Firm Ever</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dicta adipisci nemo maxime voluptatibus eos quibusdam magnam sequi quaerat commodi modi veniam, omnis enim recusandae in soluta, ducimus, velit nihil.</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_cmt">
+                    <div class="cmt_header">
+                        <img src="" alt="">
+                        <h4>John Doe</h4>
+                    </div>
+                    <h5>Best Architecture Firm Ever</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dicta adipisci nemo maxime voluptatibus eos quibusdam magnam sequi quaerat commodi modi veniam, omnis enim recusandae in soluta, ducimus, velit nihil.</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_cmt">
+                    <div class="cmt_header">
+                        <img src="" alt="">
+                        <h4>John Doe</h4>
+                    </div>
+                    <h5>Best Architecture Firm Ever</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dicta adipisci nemo maxime voluptatibus eos quibusdam magnam sequi quaerat commodi modi veniam, omnis enim recusandae in soluta, ducimus, velit nihil.</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_cmt">
+                    <div class="cmt_header">
+                        <img src="" alt="">
+                        <h4>John Doe</h4>
+                    </div>
+                    <h5>Best Architecture Firm Ever</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dicta adipisci nemo maxime voluptatibus eos quibusdam magnam sequi quaerat commodi modi veniam, omnis enim recusandae in soluta, ducimus, velit nihil.</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_cmt">
+                    <div class="cmt_header">
+                        <img src="" alt="">
+                        <h4>John Doe</h4>
+                    </div>
+                    <h5>Best Architecture Firm Ever</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dicta adipisci nemo maxime voluptatibus eos quibusdam magnam sequi quaerat commodi modi veniam, omnis enim recusandae in soluta, ducimus, velit nihil.</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_cmt">
+                    <div class="cmt_header">
+                        <img src="" alt="">
+                        <h4>John Doe</h4>
+                    </div>
+                    <h5>Best Architecture Firm Ever</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dicta adipisci nemo maxime voluptatibus eos quibusdam magnam sequi quaerat commodi modi veniam, omnis enim recusandae in soluta, ducimus, velit nihil.</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_cmt">
+                    <div class="cmt_header">
+                        <img src="" alt="">
+                        <h4>John Doe</h4>
+                    </div>
+                    <h5>Best Architecture Firm Ever</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dicta adipisci nemo maxime voluptatibus eos quibusdam magnam sequi quaerat commodi modi veniam, omnis enim recusandae in soluta, ducimus, velit nihil.</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_cmt">
+                    <div class="cmt_header">
+                        <img src="" alt="">
+                        <h4>John Doe</h4>
+                    </div>
+                    <h5>Best Architecture Firm Ever</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dicta adipisci nemo maxime voluptatibus eos quibusdam magnam sequi quaerat commodi modi veniam, omnis enim recusandae in soluta, ducimus, velit nihil.</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mng_page sided topped bottomed" id="user_page">
+            <h1 class="page_title">Users</h1>
+
+            <div class="mng_new_el">
+                <div class="mng_new_el_header">
+                    <h3>Add New User</h3>
+                    <div class="mng_dd_indicator">
+                        <div class="mng_ddi_bar"></div>
+                        <div class="mng_ddi_bar"></div>
+                    </div>
+                </div>
+                <div class="mng_new_el_content">
+                    <form action="">
+                        <input type="text" name="new_user_name" id="new_user_name" class="single_input" placeholder="Name">
+                        <input type="email" name="new_user_email" id="new_user_email" class="single_input" placeholder="Email">
+                        <input type="text" name="new_user_password" id="new_user_password" class="single_input" placeholder="Name">
+                        <button type="submit" class="cta_full black"><p>Create Element</p></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mng_page_content">
+                <div class="mng_user">
+                    <h3>John Doe</h3>
+                    <h4>johndoe@email.com</h4>
+                    <p>JohnD03!!!</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_user">
+                    <h3>John Doe</h3>
+                    <h4>johndoe@email.com</h4>
+                    <p>JohnD03!!!</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_user">
+                    <h3>John Doe</h3>
+                    <h4>johndoe@email.com</h4>
+                    <p>JohnD03!!!</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_user">
+                    <h3>John Doe</h3>
+                    <h4>johndoe@email.com</h4>
+                    <p>JohnD03!!!</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_user">
+                    <h3>John Doe</h3>
+                    <h4>johndoe@email.com</h4>
+                    <p>JohnD03!!!</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_user">
+                    <h3>John Doe</h3>
+                    <h4>johndoe@email.com</h4>
+                    <p>JohnD03!!!</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_user">
+                    <h3>John Doe</h3>
+                    <h4>johndoe@email.com</h4>
+                    <p>JohnD03!!!</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+                <div class="mng_user">
+                    <h3>John Doe</h3>
+                    <h4>johndoe@email.com</h4>
+                    <p>JohnD03!!!</p>
+                    <div class="el_btns">
+                        <button class="cta_full black"><p>Edit</p></button>
+                        <button class="cta_full black"><p>Delete</p></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <ul>
+                <li><a href="home.html"><p>Home</p></a></li>
+                <li><a href="portfolio.html"><p>Portfolio</p></a></li>
+                <li><a href="about.html"><p>About us</p></a></li>
+                <li><a href="contact.html"><p>Contact us</p></a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+</html>

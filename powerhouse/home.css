@@ -3,9 +3,19 @@
     display: flex;
     flex-direction: column;
 }
-.hero_img{
+#hero_img{
     margin-bottom: 50px;
-    opacity: 0;
+    position: relative;
+}
+#hero_img_logo{
+    position: absolute;
+    height: 112.5px;
+    left: 25px;
+    bottom: 50px;
+    filter: drop-shadow(0 0 7.5px rgba(0, 0, 0, 0.125));
+}
+.hero_img{
+    display: none;
 }
 .hero_img img{
     width: 100%;
@@ -14,29 +24,49 @@
 /*hero section - end*/
 
 
-/*value proposition section - start*/
-#vp_desc{
-    text-align: justify;
-    text-align-last: left;
-}
-#vp_grid{
+/*services section - start*/
+#service_cards{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-bottom: 25px;
 }
-.vp_cell{
-    width: calc((100%/3) - (100px/3) - 50px);
-    padding: 25px;
-    background-color: rgba(47, 39, 36, 0.0625);
-    border-radius: 10px;
+.srv_card{
+    width: calc((100%/3) - (100px/3));
+    aspect-ratio: 4/5;
+    background-color: #2f2724;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
 }
-.vp_cell p{
+.srv_card img{
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s;
+}
+.srv_card:hover img{
+    opacity: 0;
+}
+.srv_card_txt{
+    position: absolute;
+    bottom: 0;
+    margin: 25px;
+    width: calc(100% - 50px);
+    min-height: 25px;
+    z-index: 2;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.srv_card_txt h2{
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.125);
+}
+.srv_card_txt h2, .srv_card_txt p{
+    color: white;
+}
+.srv_card_txt p{
     text-align: justify;
     text-align-last: left;
-    margin: 0;
 }
-/*value proposition section - end*/
+/*services section - end*/
     
     
 /*portfolio section - start*/
@@ -71,7 +101,7 @@
     background-color: rgba(47, 39, 36, 0.125);
     padding: 25px;
     width: 475px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .cmt_author{
     display: flex;
@@ -117,13 +147,24 @@
 /*bigger tablet styling*/
 @media(max-width:1079px){
     /*hero section - start*/
-    .hero_img{
+    #hero_img_logo{
+        height: 100px;
+        bottom: 25px;
+    }
+    #hero_img{
         margin-bottom: 25px;
     }
     #hero h1{
         margin: 0;
     }
     /*hero section - end*/
+
+
+    /*services section - start*/
+    .srv_card{
+        width: calc(50% - 25px);
+    }
+    /*services section - end*/
 
     
     /*testimonials section - start*/
@@ -137,16 +178,6 @@
         margin-bottom: 0;
     }
     /*testimonials section - end*/
-
-
-    /*value proposition section - start*/
-    #vp_grid{
-        gap: 25px;
-    }
-    .vp_cell{
-        width: calc(100% - 50px);
-    }
-    /*value proposition section - end*/
 }
 
 
@@ -157,6 +188,13 @@
 
 /*small tablet styling*/
 @media(max-width:625px){
+    /*hero section - start*/
+    #hero_img_logo{
+        height: 75px;
+    }
+    /*hero section - end*/
+
+
     /*testimonials section - start*/
     #testimonials{
         flex-direction: column;
@@ -173,6 +211,20 @@
 
 /*big phone styling*/
 @media(max-width:450px){    
+    /*hero section - start*/
+    #hero_img_logo{
+        height: 50px;
+    }
+    /*hero section - end*/
+
+
+    /*services section - start*/
+    .srv_card{
+        width: 100%;
+    }
+    /*services section - end*/
+
+
     /*testimonials section - start*/
     .comment{
         width: calc(90vw - 50px);
